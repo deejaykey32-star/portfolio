@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-main: #f8f7f4;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf9f6;
+  --bg-subtle: #f2efe9;
+  --bg-muted: #e9e5dc;
+  --bg-input: #ffffff;
+  --text-main: #141414;
+  --text-heading: #0a0a0a;
+  --text-muted: #575752;
+  --text-subtle: #787870;
+  --border-main: #e2dfd5;
+  --border-subtle: #eae7dd;
+  --border-focus: #b08d4b;
+  --accent-gold: #b08d4b;
+  --accent-gold-hover: #9b793a;
+  --accent-gold-bg: rgba(176, 141, 75, 0.1);
+  --accent-gold-text: #8c6a28;
+}
+
+.dark {
+  --bg-main: #0a0a0a;
+  --bg-surface: #121212;
+  --bg-card: #161616;
+  --bg-card-hover: #1c1c1c;
+  --bg-subtle: #1a1a1a;
+  --bg-muted: #262626;
+  --bg-input: #121212;
+  --text-main: #e0e0e0;
+  --text-heading: #ffffff;
+  --text-muted: #a3a3a3;
+  --text-subtle: #737373;
+  --border-main: #262626;
+  --border-subtle: #333333;
+  --border-focus: #c5a059;
+  --accent-gold: #c5a059;
+  --accent-gold-hover: #d4af66;
+  --accent-gold-bg: rgba(197, 160, 89, 0.15);
+  --accent-gold-text: #c5a059;
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-fira {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Google Translate styling */
+.goog-te-gadget {
+  font-family: inherit !important;
+  color: var(--accent-gold) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem;
+}
+
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 0.375rem !important;
+  border: 1px solid var(--border-subtle) !important;
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease;
+}
+
+.goog-te-gadget .goog-te-combo:focus,
+.goog-te-gadget .goog-te-combo:hover {
+  border-color: var(--accent-gold) !important;
+}
+
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Editable focus ring in gold */
+.editable-highlight {
+  outline: 2px dashed var(--accent-gold) !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Smooth QR Code click animations */
+.qr-card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.qr-card-hover:hover {
+  transform: translateY(-4px);
+}
+
+
