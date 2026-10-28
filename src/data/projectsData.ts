@@ -1,9 +1,9 @@
 import heroImage from '../assets/images/portfolio_hero_workspace_1793196874101.jpg';
 import engineerProfileImage from '../assets/images/engineer_profile_1793199037354.jpg';
 import zycieDnaImage from '../assets/images/portfolio_zycie_dna_1793196890845.jpg';
-import langEduImage from '../assets/images/portfolio_edudei_audio_1793196890615.jpg';
+import langEduImage from '../assets/images/langedudei_learning.png';
 import pdfEditorImage from '../assets/images/portfolio_pdf_publishing_1793196890360.jpg';
-import guitarImage from '../assets/images/guitar_edudei_1793198759645.jpg';
+import guitarImage from '../assets/images/portfolio_edudei_audio_1793196890615.jpg';
 import drogeduImage from '../assets/images/drogedudei_traffic_1793198778598.jpg';
 import histadaImage from '../assets/images/histada_game_1793198800613.jpg';
 import mapaImage from '../assets/images/portfolio_mapa_orlich_gniazd_1793196891846.jpg';
@@ -28,7 +28,6 @@ export interface Project {
   repoName: string;
   githubUrl: string;
   liveUrl?: string;
-  aiStudioUrl?: string;
   featured?: boolean;
   image?: string;
   badgeHighlight?: string;
@@ -295,7 +294,6 @@ function playDrAdaVoice(phraseText) {
     date: 'Październik 2026',
     repoName: 'wnr',
     githubUrl: 'https://github.com/deejaykey32-star/wnr',
-    aiStudioUrl: 'https://ai.studio/apps/b8d78f36-5f2e-4926-85bd-d094984d6d4c',
     featured: true,
     image: wnrAiImage,
     badgeHighlight: 'Google AI Studio · Gemini API · Firebase Firestore · jsPDF & JSZip',
@@ -325,7 +323,6 @@ function playDrAdaVoice(phraseText) {
     date: 'Wrzesień 2026',
     repoName: 'walkie',
     githubUrl: 'https://github.com/deejaykey32-star/walkie',
-    aiStudioUrl: 'https://ai.studio/apps/b1714371-da6b-40ee-b9b9-28a88a22fbb7',
     featured: false,
     image: walkieImage,
     badgeHighlight: 'WebRTC P2P · PeerJS · Capacitor Android · Skaner QR',
@@ -415,7 +412,6 @@ function playDrAdaVoice(phraseText) {
     date: 'Październik 2026',
     repoName: 'embik365',
     githubUrl: 'https://github.com/deejaykey32-star/embik365',
-    aiStudioUrl: 'https://aistudio.google.com/apps?source=user&tag=created-by-you',
     featured: false,
     image: embikImage,
     badgeHighlight: 'Google GenAI SDK · Fix-WebM-Duration · Multer · jsPDF',

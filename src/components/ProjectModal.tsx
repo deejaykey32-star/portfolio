@@ -256,19 +256,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <ExternalLink className="w-3 h-3 text-neutral-400" />
             </a>
 
-            {project.aiStudioUrl && (
-              <a
-                href={project.aiStudioUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="px-4 py-2 text-xs font-semibold text-neutral-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors flex items-center gap-2 shadow-sm"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Google AI Studio</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            )}
-
             {project.liveUrl && (
               <a
                 href={project.liveUrl}

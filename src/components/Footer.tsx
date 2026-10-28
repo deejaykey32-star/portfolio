@@ -29,13 +29,13 @@ export const Footer: React.FC<FooterProps> = ({ onScrollTop }) => {
           </a>
 
           <a
-            href="https://aistudio.google.com/apps?source=user&tag=created-by-you"
+            href="https://github.com/deejaykey32-star?tab=repositories"
             target="_blank"
             rel="noreferrer noopener"
             className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
           >
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>Google AI Studio</span>
+            <span>Projekty Open-Source</span>
           </a>
 
           <button

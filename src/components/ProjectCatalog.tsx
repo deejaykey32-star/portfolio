@@ -222,17 +222,6 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}
-                    {project.aiStudioUrl && (
-                      <a
-                        href={project.aiStudioUrl}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="text-amber-400 hover:text-amber-300 transition-colors"
-                        title="Zobacz w Google AI Studio"
-                      >
-                        <Sparkles className="w-3.5 h-3.5" />
-                      </a>
-                    )}
                     <a
                       href={project.githubUrl}
                       target="_blank"

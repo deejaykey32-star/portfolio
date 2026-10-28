@@ -148,20 +148,10 @@ export const AboutContact: React.FC = () => {
               href="https://github.com/deejaykey32-star"
               target="_blank"
               rel="noreferrer noopener"
-              className="hover:text-white transition-colors flex items-center gap-1.5"
-            >
-              <Github className="w-3.5 h-3.5" />
-              <span>github.com/deejaykey32-star</span>
-            </a>
-            <span aria-hidden="true">&middot;</span>
-            <a
-              href="https://aistudio.google.com/apps?source=user&tag=created-by-you"
-              target="_blank"
-              rel="noreferrer noopener"
               className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>Google AI Studio Hub</span>
+              <Github className="w-3.5 h-3.5 text-amber-400" />
+              <span>github.com/deejaykey32-star</span>
             </a>
           </div>
         </div>

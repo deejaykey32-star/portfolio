@@ -34,15 +34,13 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
               {/* Direct reference links bar */}
               <div className="text-xs text-neutral-400 mb-8 flex flex-wrap items-center gap-y-2 gap-x-4">
                 <span>Źródła projektów:</span>
-                <a
-                  href="https://aistudio.google.com/apps?source=user&tag=created-by-you"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium"
+                <button
+                  onClick={onOpenAiStudio}
+                  className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium cursor-pointer"
                 >
-                  <span>Google AI Studio Hub</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+                  <Sparkles className="w-3 h-3 text-amber-400" />
+                  <span>Aplikacje Google AI Studio</span>
+                </button>
                 <span className="text-neutral-600">&middot;</span>
                 <a
                   href="https://github.com/deejaykey32-star?tab=repositories"
@@ -50,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
                   rel="noreferrer noopener"
                   className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium"
                 >
-                  <span>GitHub Repositories (23+)</span>
+                  <span>Repozytoria GitHub (23+)</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
