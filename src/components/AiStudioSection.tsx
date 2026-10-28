@@ -75,9 +75,24 @@ export const AiStudioSection: React.FC<AiStudioSectionProps> = ({ onSelectProjec
           {aiStudioApps.map(project => (
             <div
               key={project.id}
-              className="p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition-colors flex flex-col justify-between"
+              className="p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition-colors flex flex-col justify-between overflow-hidden group"
             >
               <div>
+                {project.image && (
+                  <div
+                    onClick={() => onSelectProject(project)}
+                    className="relative aspect-[16/10] -mx-6 -mt-6 mb-5 overflow-hidden cursor-pointer bg-neutral-950 border-b border-neutral-800/80"
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/10 to-transparent" />
+                  </div>
+                )}
+
                 <div className="text-xs text-neutral-400 mb-2 flex items-center justify-between">
                   <span>{project.repoName}</span>
                   <span className="font-mono text-amber-400 text-[11px]">AI Studio</span>

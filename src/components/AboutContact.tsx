@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Github, Sparkles, Check, Copy, Terminal, Shield, Award, Send } from 'lucide-react';
-import { SKILL_DOMAINS } from '../data/projectsData';
+import { SKILL_DOMAINS, ENGINEER_PROFILE_IMAGE } from '../data/projectsData';
 
 export const AboutContact: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -18,6 +18,21 @@ export const AboutContact: React.FC = () => {
         {/* About Dominik Kuta */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
           <div className="lg:col-span-5">
+            <div className="relative mb-6 rounded-2xl overflow-hidden border border-neutral-800 aspect-[4/3] bg-neutral-900 group shadow-lg">
+              <img
+                src={ENGINEER_PROFILE_IMAGE}
+                alt="Dominik Kuta — Software Engineer & Technology Architect"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs">
+                <span className="font-semibold text-white">Dominik Kuta</span>
+                <span className="text-[11px] font-mono text-amber-400 bg-neutral-950/80 px-2 py-0.5 rounded border border-neutral-800">
+                  Tech Architect
+                </span>
+              </div>
+            </div>
+
             <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">
               Profil Inżyniera
             </div>

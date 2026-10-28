@@ -1,3 +1,22 @@
+import heroImage from '../assets/images/portfolio_hero_workspace_1793196874101.jpg';
+import engineerProfileImage from '../assets/images/engineer_profile_1793199037354.jpg';
+import zycieDnaImage from '../assets/images/portfolio_zycie_dna_1793196890845.jpg';
+import langEduImage from '../assets/images/portfolio_edudei_audio_1793196890615.jpg';
+import pdfEditorImage from '../assets/images/portfolio_pdf_publishing_1793196890360.jpg';
+import guitarImage from '../assets/images/guitar_edudei_1793198759645.jpg';
+import drogeduImage from '../assets/images/drogedudei_traffic_1793198778598.jpg';
+import histadaImage from '../assets/images/histada_game_1793198800613.jpg';
+import mapaImage from '../assets/images/portfolio_mapa_orlich_gniazd_1793196891846.jpg';
+import wnrAiImage from '../assets/images/wnr_ai_studio_1793198821208.jpg';
+import walkieImage from '../assets/images/walkie_talkie_p2p_1793198849648.jpg';
+import rhzImage from '../assets/images/rhz_broszura_dtp_1793198870216.jpg';
+import eledudeiImage from '../assets/images/eledudei_circuit_1793198890098.jpg';
+import embikImage from '../assets/images/embik_media_ai_1793198914853.jpg';
+import rgbImage from '../assets/images/rgb_physics_lab_1793198939718.jpg';
+import trackerImage from '../assets/images/tracker_analytics_1793198963159.jpg';
+import koronkaImage from '../assets/images/koronka_rosary_1793198985746.jpg';
+import cvImage from '../assets/images/cv_portfolio_dev_1793199012150.jpg';
+
 export interface Project {
   id: string;
   slug: string;
@@ -26,7 +45,8 @@ export interface Project {
   };
 }
 
-export const HERO_IMAGE = '/src/assets/images/portfolio_hero_workspace_1793196874101.jpg';
+export const HERO_IMAGE = heroImage;
+export const ENGINEER_PROFILE_IMAGE = engineerProfileImage;
 
 export const PROJECTS: Project[] = [
   {
@@ -41,7 +61,7 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/deejaykey32-star/zycieDNA',
     liveUrl: 'https://deejaykey32-star.github.io/zycieDNA/',
     featured: true,
-    image: '/src/assets/images/portfolio_zycie_dna_1793196890845.jpg',
+    image: zycieDnaImage,
     badgeHighlight: '110 nagrań lektorskich audio · Zero zależności runtime',
     summary: 'Naukowa podróż od pojedynczego nukleotydu i par zasad, przez replikację, transkrypcję i translację, bioinformatykę mutacji w genie hemoglobiny (HBB), aż po biotechnologię: enzym restrykcyjny EcoRI, konstrukcję plazmidu i edycję genomu systemem CRISPR-Cas9.',
     challenge: 'Złożone zjawiska biologii molekularnej są trudne do intuicyjnego zrozumienia w tradycyjnych podręcznikach. Wyzwaniem było stworzenie płynnej, interaktywnej symulacji działającej natychmiastowo w przeglądarce bez żadnych ciężkich silników czy bibliotek, przy zachowaniu 100% wierności naukowej.',
@@ -93,7 +113,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/langedudei',
     liveUrl: 'https://langedudei.pages.dev',
     featured: true,
-    image: '/src/assets/images/portfolio_edudei_audio_1793196890615.jpg',
+    image: langEduImage,
     badgeHighlight: '104 tygodnie nauki · Metody Doma · Web Speech API',
     summary: 'Autorska platforma do opanowania języka angielskiego od poziomu zerowego (A1) do biegłości native-like (C2) w zaplanowanym cyklu 2 lat (104 tygodnie po 30 minut dziennie). Zbudowana w oparciu o naturalne reguły akwizycji językowej Doma z animowaną postacią Kuraka.',
     challenge: 'Większość aplikacji językowych skupia się na fragmentarycznym zapamiętywaniu słówek bez całościowego zanurzenia w strukturze fonetycznej i żywym dialogu, co uniemożliwia pokonanie bariery mówienia.',
@@ -125,7 +145,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/pdf-editor',
     liveUrl: 'https://github.com/deejaykey32-star/pdf-editor',
     featured: true,
-    image: '/src/assets/images/portfolio_pdf_publishing_1793196890360.jpg',
+    image: pdfEditorImage,
     badgeHighlight: '100% Client-Side · Do 1500 stron · Zero-Backend',
     summary: 'Wysoko wydajne, bezserwerowe narzędzie webowe do precyzyjnego podglądu wielkich tomów PDF (standard A5: 148 x 210 mm) oraz bezstratnego osadzania kodów QR w strumieniu wektorowym PDF bez rasteryzacji treści.',
     challenge: 'Narzędzia serwerowe generują ogromny narzut transferu i prywatności przy przetwarzaniu setek megabajtów książek. Typowe biblioteki webowe konwertują strony na rastry, niszcząc ostrość tekstu typograficznego w druku profesjonalnym.',
@@ -157,6 +177,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/guitar-edudei',
     liveUrl: 'https://guitaredudei.pages.dev',
     featured: false,
+    image: guitarImage,
     badgeHighlight: 'Cyfrowy tuner Web Audio · Wejście Jack & Mikrofon',
     summary: 'Interaktywna platforma do praktycznej nauki gry na gitarze klasycznej, akustycznej i elektrycznej. Zawiera interaktywny gryf z wizualizacją chwytów akordowych, animowany metronom oraz cyfrowy tuner częstotliwościowy.',
     challenge: 'Tradycyjna nauka akordów z diagramów na kartce papieru nie daje uczniowi natychmiastowej informacji zwrotnej, czy instrument stroi i czy prawidłowo dociska struny.',
@@ -186,6 +207,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/drogedudei',
     liveUrl: 'https://drogedudei.pages.dev',
     featured: false,
+    image: drogeduImage,
     badgeHighlight: '36 rozdziałów · 4 moduły · Wektory znaków SVG',
     summary: 'Aplikacja dydaktyczna dla kandydatów na kierowców łącząca przepisy ruchu drogowego, praktykę manewrową, psychotesty kierowców oraz profilaktykę zdrowotną. Oparta na maskotce Kuraka-Szofera.',
     challenge: 'Materiały szkoleniowe do prawa jazdy bywają nużące i rzadko poruszają kluczowe tematy psychofizyki, zmęczenia za kółkiem oraz badań okulistycznych.',
@@ -215,6 +237,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/histada',
     liveUrl: 'https://github.com/deejaykey32-star/histada',
     featured: false,
+    image: histadaImage,
     badgeHighlight: '52 047 360 opowiadań · 432 dwujęzyczne karty do druku',
     summary: 'Epicka gra dydaktyczna w trzech częściach: rozgrywka planszowa 2D/3D (1–12 graczy), "W Kręgu Tajemnicy" oraz "Cyfrowy Diament", wzbogacona o kompletny generator zestawów do druku fizycznego.',
     challenge: 'Połączenie cyfrowej elastyczności generowania narracji historycznej z fizycznym, namacalnym doświadczeniem gry planszowej przy zachowaniu pełnej spójności chronologicznej dziejów.',
@@ -244,7 +267,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/mapa',
     liveUrl: 'https://github.com/deejaykey32-star/mapa',
     featured: true,
-    image: '/src/assets/images/portfolio_mapa_orlich_gniazd_1793196891846.jpg',
+    image: mapaImage,
     badgeHighlight: 'System GIS · 3 etapy pielgrzymki · Szlak Jury Krakowsko-Częstochowskiej',
     summary: 'Kartograficzno-multimedialny portal obsługujący 3-etapową Wielką Pielgrzymkę Gwiaździstą 2026: Zbieżność międzynarodowych tras do Częstochowy, wspólny marsz Szlakiem Orlich Gniazd do Krakowa-Łagiewnik oraz Rozesłanie.',
     challenge: 'Wielotysięczne grupy pielgrzymkowe poruszające się zróżnicowanym terenem jurajskim wymagają natychmiastowego dostępu do profilu wzniesień, źródeł wody, punktów medycznych i koordynatów w warunkach słabego zasięgu.',
@@ -274,6 +297,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/wnr',
     aiStudioUrl: 'https://ai.studio/apps/b8d78f36-5f2e-4926-85bd-d094984d6d4c',
     featured: true,
+    image: wnrAiImage,
     badgeHighlight: 'Google AI Studio · Gemini API · Firebase Firestore · jsPDF & JSZip',
     summary: 'Aplikacja stworzona w ekosystemie Google AI Studio. Łączy potęgę multimodalnego modelu Gemini z przetwarzaniem dokumentów PDF (PDF.js), generowaniem paczek ZIP, kodami QR i synchronizacją Firebase.',
     challenge: 'Wielostronicowe dokumenty techniczne i edukacyjne wymagają semantycznego streszczenia, generowania pytań sprawdzających oraz automatycznego składu spersonalizowanych certyfikatów i podsumowań PDF.',
@@ -303,6 +327,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/walkie',
     aiStudioUrl: 'https://ai.studio/apps/b1714371-da6b-40ee-b9b9-28a88a22fbb7',
     featured: false,
+    image: walkieImage,
     badgeHighlight: 'WebRTC P2P · PeerJS · Capacitor Android · Skaner QR',
     summary: 'Aplikacja komunikacyjna czasu rzeczywistego typu Walkie-Talkie (Push-to-Talk) dla przeglądarek i telefonów z systemem Android. Błyskawiczne parowanie urządzeń za pomocą skanowania kodu QR.',
     challenge: 'Nawiązanie bezpośredniego kanału audio o zerowym opóźnieniu między dwoma urządzeniami mobilnymi bez konieczności zakładania kont i skomplikowanej konfiguracji IP.',
@@ -332,6 +357,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/rhz365-broszura',
     liveUrl: 'https://github.com/deejaykey32-star/rhz365-broszura',
     featured: false,
+    image: rhzImage,
     badgeHighlight: 'Poligrafia DTP · Profile Amazon KDP · Spady 3.0 mm',
     summary: 'Wyspecjalizowany generator plików produkcyjnych dla publikacji książkowej projektu Różaniec Historii Zbawienia (widokinaraj.pl), obsługujący formaty 16 i 20 stron z rygorystycznymi wytycznymi drukarskimi.',
     challenge: 'Drukarnie internetowe oraz Amazon KDP odrzucają pliki z błędnymi spadami, niewłaściwą kolejnością składek (impozycja) lub naruszeniem bezpiecznego marginesu wewnętrznego grzbietu.',
@@ -361,6 +387,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/eledudei',
     liveUrl: 'https://github.com/deejaykey32-star/eledudei',
     featured: false,
+    image: eledudeiImage,
     badgeHighlight: 'Uprawnienia SEP · Sieci TN/TT/IT · Pomiary ochronne',
     summary: 'Aplikacja interaktywna dla elektryków i inżynierów przygotowująca do egzaminów państwowych Stowarzyszenia Elektryków Polskich (Grupa 1: urządzenia, instalacje i sieci elektroenergetyczne).',
     challenge: 'Zrozumienie schematów ochrony przeciwporażeniowej i warunków samoczynnego wyłączenia zasilania (SWZ) wymaga wizualizacji drogi prądu zwarciowego i działania wyłączników RCD.',
@@ -390,6 +417,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/embik365',
     aiStudioUrl: 'https://aistudio.google.com/apps?source=user&tag=created-by-you',
     featured: false,
+    image: embikImage,
     badgeHighlight: 'Google GenAI SDK · Fix-WebM-Duration · Multer · jsPDF',
     summary: 'Zintegrowana platforma AI tworząca multimedialne materiały dla projektu Droga365: generowanie treści prompts, przetwarzanie i korekcja nagrań audio/wideo (WebM) oraz automatyczna generacja archiwów ZIP i dokumentów PDF.',
     challenge: 'Nagrania wideo i audio w przeglądarkach w formacie WebM często tracą nagłówki czasu trwania (duration bug), co uniemożliwia ich przewijanie w standardowych odtwarzaczach.',
@@ -419,6 +447,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/symulacja-RGB-zmiany',
     liveUrl: 'https://github.com/deejaykey32-star/symulacja-RGB-zmiany',
     featured: false,
+    image: rgbImage,
     badgeHighlight: 'Synteza addytywna RGB · Modelowanie światła · Motion UI',
     summary: 'Narzędzie laboratoryjne umożliwiające eksperymentowanie z fizyką fal świetlnych, addytywną syntezą barw (czerwień, zieleń, niebieski) oraz subiektywną percepcją wzrokową oka ludzkiego.',
     challenge: 'Zrozumienie różnicy między addytywnym mieszaniem światła na ekranach (RGB) a subtraktywnym w poligrafii (CMYK) bywa mylące bez możliwości natychmiastowej manipulacji składowymi.',
@@ -446,6 +475,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/Tracker',
     liveUrl: 'https://github.com/deejaykey32-star/Tracker',
     featured: false,
+    image: trackerImage,
     badgeHighlight: 'Firebase Cloud DB · Gemini Copilot · Metryki zadań',
     summary: 'Dedykowany panel kontrolny do rejestrowania postępów w pisaniu bloga, publikacji wpisów technicznych i zarządzania sprintami deweloperskimi projektów.',
     challenge: 'Zarządzanie wieloma projektami jednocześnie (EduDei, RHZ, gry, aplikacje AI) wymagało scentralizowanego narzędzia z historią w chmurze i szybkim dodawaniem notatek.',
@@ -473,6 +503,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/koronka2',
     liveUrl: 'https://github.com/deejaykey32-star/koronka2',
     featured: false,
+    image: koronkaImage,
     badgeHighlight: 'Interaktywny różaniec · Lektor audio · PWA',
     summary: 'Aplikacja dewocyjna i medytacyjna oferująca interaktywne odliczanie paciorków koronki, podkłady muzyczno-lektorskie oraz archiwizację intencji modlitewnych.',
     challenge: 'Stworzenie aplikacji o podniosłym, wyciszającym charakterze, która umożliwia modlitwę w podróży bez rozpraszających reklam i z pełnym wsparciem offline.',
@@ -500,6 +531,7 @@ function playDrAdaVoice(phraseText) {
     githubUrl: 'https://github.com/deejaykey32-star/cv-dominik-kuta',
     liveUrl: 'https://github.com/deejaykey32-star/cv-dominik-kuta',
     featured: false,
+    image: cvImage,
     badgeHighlight: 'Express 5 · Drizzle ORM · PostgreSQL · Orval Codegen',
     summary: 'Aplikacja CV Dominika Kuty zbudowana w architekturze pnpm workspaces z serwerem Express 5, bazą PostgreSQL, typowanymi kontraktami OpenAPI i generowaniem PDF.',
     challenge: 'Utrzymanie zawsze aktualnego CV z wersjami językowymi oraz natychmiastowym generowaniem idealnie sformatowanego pliku PDF do rekrutacji.',

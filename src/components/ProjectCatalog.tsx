@@ -143,9 +143,24 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group bg-neutral-900 border border-neutral-800 hover:border-neutral-700 rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between"
+                className="group bg-neutral-900 border border-neutral-800 hover:border-neutral-700 rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between overflow-hidden"
               >
                 <div>
+                  {project.image && (
+                    <div
+                      onClick={() => onSelectProject(project)}
+                      className="relative aspect-[16/10] -mx-6 -mt-6 mb-5 overflow-hidden cursor-pointer bg-neutral-950 border-b border-neutral-800/80"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/10 to-transparent" />
+                    </div>
+                  )}
+
                   {/* Quiet unboxed metadata */}
                   <div className="text-xs text-neutral-400 mb-2.5 flex items-center justify-between">
                     <div className="flex items-center gap-2">
