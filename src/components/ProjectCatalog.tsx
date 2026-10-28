@@ -211,13 +211,13 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
                   </button>
 
                   <div className="flex items-center gap-3">
-                    {project.liveUrl && (
+                    {project.liveUrl && project.liveUrl !== project.githubUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer noopener"
-                        className="text-neutral-400 hover:text-white transition-colors"
-                        title="Otwórz wersję demonstracyjną"
+                        className="text-amber-400 hover:text-amber-300 transition-colors"
+                        title="Uruchom aplikację (Live Demo)"
                       >
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
@@ -227,7 +227,7 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
                       target="_blank"
                       rel="noreferrer noopener"
                       className="text-neutral-400 hover:text-white transition-colors"
-                      title="Otwórz kod źródłowy w GitHub"
+                      title="Kod źródłowy w GitHub"
                     >
                       <Github className="w-3.5 h-3.5" />
                     </a>

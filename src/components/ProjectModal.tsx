@@ -245,6 +245,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         {/* Modal Footer Controls */}
         <div className="px-6 py-4 border-t border-neutral-800 bg-neutral-900/90 flex flex-wrap items-center justify-between gap-4 sticky bottom-0 z-20">
           <div className="flex items-center gap-3">
+            {project.liveUrl && project.liveUrl !== project.githubUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="px-4 py-2 text-xs font-bold text-neutral-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors flex items-center gap-2 shadow-sm"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                <span>Uruchom Live Demo</span>
+              </a>
+            )}
+
             <a
               href={project.githubUrl}
               target="_blank"
@@ -255,18 +267,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <span>Repozytorium GitHub</span>
               <ExternalLink className="w-3 h-3 text-neutral-400" />
             </a>
-
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="px-4 py-2 text-xs font-semibold text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg transition-colors flex items-center gap-2"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                <span>Uruchom Live Demo</span>
-              </a>
-            )}
           </div>
 
           <button

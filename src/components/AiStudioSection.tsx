@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Sparkles, Cpu, Bot, Flame, ShieldCheck, Zap } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, Cpu, Bot, Flame, ShieldCheck, Zap } from 'lucide-react';
 import { Project } from '../data/projectsData';
 
 interface AiStudioSectionProps {
@@ -120,16 +120,16 @@ export const AiStudioSection: React.FC<AiStudioSectionProps> = ({ onSelectProjec
                   Szczegóły &amp; Architektura
                 </button>
 
-                <div className="flex items-center gap-2">
-                  {project.liveUrl && (
+                <div className="flex items-center gap-3">
+                  {project.liveUrl && project.liveUrl !== project.githubUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-neutral-400 hover:text-white transition-colors inline-flex items-center gap-1"
-                      title="Otwórz wersję demonstracyjną"
+                      className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1"
+                      title="Uruchom aplikację (Live Demo)"
                     >
-                      <ExternalLink className="w-3.5 h-3.5 text-amber-400" />
+                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}
                   <a
@@ -137,9 +137,9 @@ export const AiStudioSection: React.FC<AiStudioSectionProps> = ({ onSelectProjec
                     target="_blank"
                     rel="noreferrer noopener"
                     className="text-neutral-400 hover:text-white transition-colors"
-                    title="Zobacz repozytorium GitHub"
+                    title="Kod źródłowy w GitHub"
                   >
-                    <ExternalLink className="w-3.5 h-3.5" />
+                    <Github className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>
