@@ -4,7 +4,7 @@ import { SKILL_DOMAINS, ENGINEER_PROFILE_IMAGE } from '../data/projectsData';
 
 export const AboutContact: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const email = 'deejaykey32@gmail.com';
+  const email = 'kuta.dominik@gmail.com';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
