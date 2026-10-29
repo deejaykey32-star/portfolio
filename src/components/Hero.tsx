@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
 
               {/* Lead Copy */}
               <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl mb-8">
-                Cześć, jestem <strong className="text-white font-semibold">Dominik Kuta</strong> (twórca projektów pod szyldem <span className="text-amber-300 font-medium">deejaykey32-star</span>). Projektuję i wdrażam zaawansowane aplikacje multimodalne w <strong className="text-white font-semibold">Google AI Studio</strong>, naukowe symulacje bioinformatyczne, ekosystem edukacyjny <strong className="text-white font-semibold">EduDei</strong> oraz bezkompromisowe narzędzia poligraficzne w architekturze client-side.
+                Witam, nazywam się <strong className="text-white font-semibold">Dominik Kuta</strong> (twórca projektów pod szyldem <span className="text-amber-300 font-medium">deejaykey32-star</span>). Projektuję i wdrażam zaawansowane aplikacje multimodalne w <strong className="text-white font-semibold">Google AI Studio</strong>, naukowe symulacje bioinformatyczne, ekosystem edukacyjny <strong className="text-white font-semibold">EduDei</strong> oraz bezkompromisowe narzędzia poligraficzne w architekturze client-side.
               </p>
 
               {/* Direct reference links bar */}

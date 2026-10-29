@@ -11,7 +11,6 @@ import wnrAiImage from '../assets/images/wnr_ai_studio_1793198821208.jpg';
 import walkieImage from '../assets/images/walkie_talkie_p2p_1793198849648.jpg';
 import rhzImage from '../assets/images/rhz_broszura_dtp_1793198870216.jpg';
 import eledudeiImage from '../assets/images/eledudei_circuit_1793198890098.jpg';
-import embikImage from '../assets/images/embik_media_ai_1793198914853.jpg';
 import rgbImage from '../assets/images/rgb_physics_lab_1793198939718.jpg';
 import trackerImage from '../assets/images/tracker_analytics_1793198963159.jpg';
 import koronkaImage from '../assets/images/koronka_rosary_1793198985746.jpg';
@@ -287,21 +286,22 @@ function playDrAdaVoice(phraseText) {
   {
     id: 'ai-studio-wnr',
     slug: 'ai-studio-wnr',
-    title: 'WNR 365 — Google AI Studio Multi-Tool',
-    tagline: 'Hybrydowy analizator dokumentacji PDF i syntezy wiedzy z Gemini API i Firebase',
+    title: 'Widoki na Raj (WNR 365) — Blog & Ekosystem AI',
+    tagline: 'Oficjalny portal i blog Widoki na Raj zintegrowany z Gemini API, procesorem PDF i Firebase',
     category: 'ai',
     categoryLabel: 'AI & Google AI Studio',
     date: 'Październik 2026',
     repoName: 'wnr',
     githubUrl: 'https://github.com/deejaykey32-star/wnr',
-    liveUrl: 'https://wnr365.pages.dev',
+    liveUrl: 'https://widokinaraj.pl',
     featured: true,
     image: wnrAiImage,
-    badgeHighlight: 'Google AI Studio · Gemini API · Firebase Firestore · jsPDF & JSZip',
-    summary: 'Aplikacja stworzona w ekosystemie Google AI Studio. Łączy potęgę multimodalnego modelu Gemini z przetwarzaniem dokumentów PDF (PDF.js), generowaniem paczek ZIP, kodami QR i synchronizacją Firebase.',
+    badgeHighlight: 'Google AI Studio · Gemini API · Firebase Firestore · widokinaraj.pl',
+    summary: 'Oficjalny blog i platforma multimedialna projektu Widoki na Raj (WnR365 / eMBiK365 / Droga365) stworzona w ekosystemie Google AI Studio. Łączy potęgę multimodalnego modelu Gemini z przetwarzaniem dokumentów PDF (PDF.js), generowaniem paczek ZIP, kodami QR i synchronizacją Firebase.',
     challenge: 'Wielostronicowe dokumenty techniczne i edukacyjne wymagają semantycznego streszczenia, generowania pytań sprawdzających oraz automatycznego składu spersonalizowanych certyfikatów i podsumowań PDF.',
     solution: 'Zintegrowano backend Express z Google GenAI SDK, umożliwiając strumieniową analizę promptów i bezstratne tworzenie paczek dystrybucyjnych za pomocą jsPDF i JSZip.',
     keyFeatures: [
+      'Oficjalny portal i blog projektu Widoki na Raj (widokinaraj.pl)',
       'Bezpośrednia integracja z modelem Gemini API (analiza semantyczna i generowanie treści)',
       'Dwukierunkowy procesor PDF: ekstrakcja tekstu przez PDF.js i dynamiczne renderowanie w jsPDF',
       'Chmurowa synchronizacja stanu i użytkowników z wykorzystaniem Firebase Firestore',
@@ -310,8 +310,8 @@ function playDrAdaVoice(phraseText) {
     techStack: ['@google/genai', 'React', 'TypeScript', 'Express', 'Firebase Firestore', 'jsPDF', 'JSZip', 'PDF.js'],
     metrics: [
       { label: 'Silnik sztucznej inteligencji', value: 'Google Gemini 2.5 / 2.0' },
-      { label: 'Formaty wyjściowe', value: 'PDF, ZIP, JSON, QR' },
-      { label: 'Architektura', value: 'Serverless / Cloud Run' }
+      { label: 'Oficjalny adres', value: 'widokinaraj.pl' },
+      { label: 'Infrastruktura', value: 'Cloudflare Pages & GCP' }
     ]
   },
   {
@@ -405,36 +405,6 @@ function playDrAdaVoice(phraseText) {
     ]
   },
   {
-    id: 'embik365',
-    slug: 'embik365',
-    title: 'Embik365 / Droga365 — Multimedialna Fabryka AI',
-    tagline: 'Generator multimedialnych materiałów edukacyjnych z modelem Gemini i eksportem',
-    category: 'ai',
-    categoryLabel: 'AI & Google AI Studio',
-    date: 'Październik 2026',
-    repoName: 'embik365',
-    githubUrl: 'https://github.com/deejaykey32-star/embik365',
-    liveUrl: 'https://embik365.pages.dev',
-    featured: false,
-    image: embikImage,
-    badgeHighlight: 'Google GenAI SDK · Fix-WebM-Duration · Multer · jsPDF',
-    summary: 'Zintegrowana platforma AI tworząca multimedialne materiały dla projektu Droga365: generowanie treści prompts, przetwarzanie i korekcja nagrań audio/wideo (WebM) oraz automatyczna generacja archiwów ZIP i dokumentów PDF.',
-    challenge: 'Nagrania wideo i audio w przeglądarkach w formacie WebM często tracą nagłówki czasu trwania (duration bug), co uniemożliwia ich przewijanie w standardowych odtwarzaczach.',
-    solution: 'Zastosowano moduł fix-webm-duration do patchowania metadanych binarnych w locie oraz asynchroniczny potok Express z Gemini API do transkrypcji i wzbogacania treści.',
-    keyFeatures: [
-      'Dwukierunkowa komunikacja z API Gemini dla dynamicznej generacji scenariuszy',
-      'Naprawa nagłówków kontenerów multimedialnych WebM w czasie rzeczywistym',
-      'Automatyczny eksport zestawów edukacyjnych do paczek ZIP z kodami QR i PDF',
-      'Płynna animacja interfejsu oparta o bibliotekę Motion'
-    ],
-    techStack: ['@google/genai', 'Express', 'React', 'TypeScript', 'fix-webm-duration', 'jsPDF', 'JSZip', 'Multer'],
-    metrics: [
-      { label: 'Integracja AI', value: 'Google Gemini Pro / Flash' },
-      { label: 'Format multimediów', value: 'WebM + Audio Fix' },
-      { label: 'Dystrybucja', value: 'ZIP + PDF Packager' }
-    ]
-  },
-  {
     id: 'symulacja-rgb',
     slug: 'symulacja-rgb',
     title: 'Symulacja Zmiany RGB — Laboratorium Fizyki Barw',
@@ -444,6 +414,7 @@ function playDrAdaVoice(phraseText) {
     date: 'Wrzesień 2026',
     repoName: 'symulacja-RGB-zmiany',
     githubUrl: 'https://github.com/deejaykey32-star/symulacja-RGB-zmiany',
+    liveUrl: 'https://symulacja-rgb.pages.dev',
     featured: false,
     image: rgbImage,
     badgeHighlight: 'Synteza addytywna RGB · Modelowanie światła · Motion UI',
@@ -466,11 +437,12 @@ function playDrAdaVoice(phraseText) {
     slug: 'tracker-postepu',
     title: 'Blog & Project Progress Tracker',
     tagline: 'System śledzenia postępów i zarządzania kamieniami milowymi z Firebase i Gemini',
-    category: 'tools',
-    categoryLabel: 'Narzędzia & Poligrafia',
+    category: 'ai',
+    categoryLabel: 'AI & Narzędzia',
     date: 'Sierpień 2026',
     repoName: 'Tracker',
     githubUrl: 'https://github.com/deejaykey32-star/Tracker',
+    liveUrl: 'https://tracker-postepu.pages.dev',
     featured: false,
     image: trackerImage,
     badgeHighlight: 'Firebase Cloud DB · Gemini Copilot · Metryki zadań',
