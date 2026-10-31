@@ -16,6 +16,7 @@ import trackerImage from '../assets/images/tracker_analytics_1793198963159.jpg';
 import koronkaImage from '../assets/images/koronka_rosary_1793198985746.jpg';
 import cvImage from '../assets/images/cv_portfolio_dev_1793199012150.jpg';
 import embikImage from '../assets/images/embik_media_ai_1793198914853.jpg';
+import projedudeiImage from '../assets/images/projedudei_kurak_icon.png';
 
 export interface Project {
   id: string;
@@ -223,6 +224,60 @@ function playDrAdaVoice(phraseText) {
       { label: 'Główne sekcje', value: '4 moduły wiedzy' },
       { label: 'Codzienny mikro-nawyk', value: 'Krąg 20 minut' }
     ]
+  },
+  {
+    id: 'projedudei',
+    slug: 'projedudei',
+    title: 'ProjEduDei — AI Project & Product Master z Kurakiem',
+    tagline: 'Edukacyjno-certyfikacyjna platforma dla PM, Scrum Masterów i AI Product Builderów',
+    category: 'edutech',
+    categoryLabel: 'Edukacja & EdTech',
+    date: 'Październik 2026',
+    repoName: 'projedudei',
+    githubUrl: 'https://github.com/deejaykey32-star/projedudei',
+    liveUrl: 'https://projedudei.pages.dev',
+    featured: true,
+    image: projedudeiImage,
+    badgeHighlight: 'PMP · PRINCE2 · PSM · PSPO · AI Vibe Coding · Web Speech TTS',
+    summary: 'Kompleksowa aplikacja edukacyjno-certyfikacyjna dla współczesnych Project Managerów, Scrum Masterów, Product Ownerów i AI Product Builderów. Uczy, jak bezpośrednio rozmawiać z klientami biznesowymi, badać ich potrzeby i tworzyć pełnowymiarowe aplikacje na zamówienie z wykorzystaniem modeli AI (Vibe Coding, AI Agents, Cloudflare, Supabase) bez konieczności angażowania tradycyjnych zespołów deweloperskich. Przewodnikiem jest Niebieski Kurak PM z aktówką i wbudowanym głosem lektora.',
+    challenge: 'Tradycyjne kursy zarządzania projektami są przeładowane suchą teorią, nie przygotowują do rewolucji AI w wytwarzaniu oprogramowania ani do bezpośrednich negocjacji i dynamicznego prototypowania z klientem.',
+    solution: 'Stworzono interaktywną platformę zintegrowaną z modułem syntezy mowy (Web Speech API pl-PL), symulatorem rozmów z klientami biznesowymi, bazą egzaminacyjną (PMP, PRINCE2, PSM I-III, PSPO I-III, PMI-ACP) oraz gotowymi paczkami instalacyjnymi Android APK/PWA.',
+    keyFeatures: [
+      '5 ścieżek certyfikacji: Project Manager (PMP, PRINCE2, IPMA), Scrum Master (PSM, CSM), Product Owner (PSPO), Product Manager oraz Agile/PBA',
+      'Mentor Niebieski Kurak PM: interaktywny lektor Web Speech API czytający na głos pytania, teorię i symulacje rozmów biznesowych',
+      'Moduł AI Vibe Coding: techniki budowy aplikacji na zamówienie z modelami AI omijając powolne zespoły programistyczne',
+      'Symulator trudnych scenariuszy z klientami i automatyczne generowanie playbooków wdrożeniowych',
+      'Statyczny potok Next.js 15 wdrożony natywnie na globalnej sieci brzegowej Cloudflare Pages',
+      'Wersje instalacyjne dla urządzeń mobilnych (Android APK, AAB, iOS IPA oraz PWA)'
+    ],
+    techStack: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Web Speech API', 'Cloudflare Pages', 'PWA / Capacitor'],
+    metrics: [
+      { label: 'Ścieżki certyfikacji', value: '5 głównych ról' },
+      { label: 'Baza pytań testowych', value: 'PMP / PSM / PSPO' },
+      { label: 'Synteza lektorska', value: 'Web Speech TTS' },
+      { label: 'Dystrybucja', value: 'Cloudflare Pages' }
+    ],
+    codeSnippet: {
+      filename: 'kurak-speech-engine.ts',
+      language: 'typescript',
+      code: `// Silnik syntezy mowy lektora Kuraka z synchronizacją animacji dzioba
+export function speakKurakMessage(text: string, rate = 1.0) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'pl-PL';
+  utterance.rate = rate;
+  
+  const voices = window.speechSynthesis.getVoices();
+  const polishVoice = voices.find(v => v.lang.startsWith('pl'));
+  if (polishVoice) utterance.voice = polishVoice;
+  
+  utterance.onstart = () => setKurakSpeaking(true);
+  utterance.onend = () => setKurakSpeaking(false);
+  window.speechSynthesis.speak(utterance);
+}`
+    }
   },
   {
     id: 'histada',
@@ -767,8 +822,8 @@ function playDrAdaVoice(phraseText) {
 ];
 
 export const STATS = [
-  { label: 'Publiczne Repozytoria GitHub', value: '23+' },
-  { label: 'Wdrożenia Cloudflare Pages', value: '16+' },
+  { label: 'Publiczne Repozytoria GitHub', value: '24+' },
+  { label: 'Wdrożenia Cloudflare Pages', value: '17+' },
   { label: 'Eksperymenty CodePen', value: 'Aktywne' },
   { label: 'Generowane kombinacje narracji', value: '52M+' },
   { label: 'Architektura i Chmura', value: 'Cloudflare & GCP' }
@@ -782,8 +837,8 @@ export const SKILL_DOMAINS = [
   },
   {
     title: 'EdTech & Interaktywne Systemy Dydaktyczne',
-    desc: 'Nowatorskie platformy nauki: LangEduDei (język angielski A1–C2, 104 tygodnie), DrogEduDei (kodeks drogowy, psychotesty), GuitarEduDei (stroik Web Audio, gitara).',
-    tools: ['Web Speech API', 'Web Audio API', 'Gamifikacja XP', 'Metody Doma', 'Spaced Repetition']
+    desc: 'Nowatorskie platformy nauki: ProjEduDei (certyfikacje PM/Scrum/PO, Vibe Coding z AI), LangEduDei (język angielski A1–C2, 104 tygodnie), DrogEduDei (kodeks drogowy, psychotesty), GuitarEduDei (stroik Web Audio, gitara).',
+    tools: ['Web Speech API', 'Web Audio API', 'Gamifikacja XP', 'Metody Doma', 'Spaced Repetition', 'AI Vibe Coding']
   },
   {
     title: 'Bioinformatyka & Gry Naukowe',

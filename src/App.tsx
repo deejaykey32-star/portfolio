@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { BentoFeatured } from './components/BentoFeatured';
+import { ProjedudeiSection } from './components/ProjedudeiSection';
 import { AiStudioSection } from './components/AiStudioSection';
 import { ProjectCatalog } from './components/ProjectCatalog';
 import { InteractiveDemos } from './components/InteractiveDemos';
@@ -43,6 +44,12 @@ export default function App() {
 
         {/* Bento Grid: Featured Showcases */}
         <BentoFeatured
+          projects={PROJECTS}
+          onSelectProject={(project) => setSelectedProject(project)}
+        />
+
+        {/* ProjEduDei Dedicated Section */}
+        <ProjedudeiSection
           projects={PROJECTS}
           onSelectProject={(project) => setSelectedProject(project)}
         />

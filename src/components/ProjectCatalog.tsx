@@ -66,11 +66,10 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 ${
-                    isActive
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 ${isActive
                       ? 'bg-amber-400 text-neutral-950 font-semibold shadow-sm'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
-                  }`}
+                    }`}
                 >
                   <span>{cat.label}</span>
                   <span className={`text-[10px] tabular-nums font-mono ${isActive ? 'text-neutral-900/80' : 'text-neutral-500'}`}>

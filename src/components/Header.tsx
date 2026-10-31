@@ -35,6 +35,17 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             Wyróżnione
           </a>
           <a
+            href="#projedudei"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate('projedudei');
+            }}
+            className="hover:text-white text-amber-400 font-semibold transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse inline-block" />
+            ProjEduDei
+          </a>
+          <a
             href="#catalog"
             onClick={(e) => {
               e.preventDefault();
