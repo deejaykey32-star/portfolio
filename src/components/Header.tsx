@@ -40,9 +40,8 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
               e.preventDefault();
               onNavigate('projedudei');
             }}
-            className="hover:text-white text-amber-400 font-semibold transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5"
+            className="hover:text-white transition-colors whitespace-nowrap shrink-0"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse inline-block" />
             ProjEduDei
           </a>
           <a

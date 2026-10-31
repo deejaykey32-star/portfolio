@@ -31,7 +31,7 @@ export const ProjedudeiSection: React.FC<ProjedudeiSectionProps> = ({ onSelectPr
             </h2>
             
             <p className="text-base sm:text-lg text-neutral-300 leading-relaxed mb-6 max-w-3xl">
-              Nowoczesna aplikacja edukacyjno-certyfikacyjna dla <strong className="text-white font-semibold">Project Managerów, Scrum Masterów, Product Ownerów</strong> oraz <strong className="text-white font-semibold">AI Product Builderów</strong>. Uczy, jak bezpośrednio rozmawiać z klientami biznesowymi, badać ich potrzeby i tworzyć pełnowymiarowe aplikacje na zamówienie z wykorzystaniem modeli sztucznej inteligencji (Vibe Coding, AI Agents, Cloudflare, Supabase) &mdash; całkowicie <strong className="text-amber-300 font-semibold">omijając powolne, kosztowne zespoły programistyczne</strong>.
+              Nowoczesna aplikacja edukacyjno-certyfikacyjna dla <strong className="text-white font-semibold">Project Managerów, Scrum Masterów, Product Ownerów</strong> oraz <strong className="text-white font-semibold">AI Product Builderów</strong>. Uczy, jak bezpośrednio rozmawiać z klientami biznesowymi, badać ich potrzeby i tworzyć pełnowymiarowe aplikacje na zamówienie z wykorzystaniem modeli sztucznej inteligencji (Vibe Coding, AI Agents, Cloudflare, Supabase) &mdash; całkowicie <strong className="text-white font-semibold">omijając powolne, kosztowne zespoły programistyczne</strong>.
             </p>
 
             {/* Direct CTA Action Buttons */}
@@ -218,3 +218,4 @@ export const ProjedudeiSection: React.FC<ProjedudeiSectionProps> = ({ onSelectPr
     </section>
   );
 };
+

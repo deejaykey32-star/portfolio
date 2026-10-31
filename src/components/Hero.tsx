@@ -48,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
                   rel="noreferrer noopener"
                   className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium"
                 >
-                  <span>Repozytoria GitHub (23+)</span>
+                  <span>Repozytoria GitHub (24+)</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <span className="text-neutral-600">&middot;</span>
