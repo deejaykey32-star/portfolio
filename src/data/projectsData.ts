@@ -15,13 +15,14 @@ import rgbImage from '../assets/images/rgb_physics_lab_1793198939718.jpg';
 import trackerImage from '../assets/images/tracker_analytics_1793198963159.jpg';
 import koronkaImage from '../assets/images/koronka_rosary_1793198985746.jpg';
 import cvImage from '../assets/images/cv_portfolio_dev_1793199012150.jpg';
+import embikImage from '../assets/images/embik_media_ai_1793198914853.jpg';
 
 export interface Project {
   id: string;
   slug: string;
   title: string;
   tagline: string;
-  category: 'ai' | 'edutech' | 'tools' | 'games' | 'maps';
+  category: 'ai' | 'edutech' | 'tools' | 'games' | 'maps' | 'codepen';
   categoryLabel: string;
   date: string;
   repoName: string;
@@ -514,12 +515,261 @@ function playDrAdaVoice(phraseText) {
       { label: 'Środowisko', value: 'Node.js 24 + pnpm monorepo' },
       { label: 'Baza danych', value: 'PostgreSQL + Drizzle ORM' }
     ]
+  },
+  {
+    id: 'olacrm',
+    slug: 'olacrm',
+    title: 'olaCRM — System Rekrutacji Zdalnej & Kanban',
+    tagline: 'Nowoczesny system CRM do zarządzania procesami rekrutacji zdalnej z tablicą Kanban',
+    category: 'tools',
+    categoryLabel: 'Narzędzia & CRM',
+    date: 'Październik 2026',
+    repoName: 'olacrm',
+    githubUrl: 'https://github.com/deejaykey32-star',
+    liveUrl: 'https://olacrm-remote.pages.dev',
+    featured: false,
+    image: trackerImage,
+    badgeHighlight: 'Tablica Kanban · Rejestr Kandydatów · Cloudflare Pages',
+    summary: 'Kompleksowy system klasy CRM zaprojektowany pod specyfikę rekrutacji zdalnej na etaty (telemarketerzy, copywriterzy, pracownicy biurowi). Łączy interaktywną tablicę Kanban etapów rekrutacyjnych, bazę zweryfikowanych firm zdalnych oraz lokalną persystencję danych z przełącznikiem motywu.',
+    challenge: 'Zarządzanie dziesiątkami równoległych aplikacji rekrutacyjnych bez drogich abonamentów CRM, przy zachowaniu natychmiastowej responsywności i pełnej kontroli nad danymi kandydatów.',
+    solution: 'Zaimplementowano szybką aplikację React z architekturą stanu w pamięci lokalnej przeglądarki, modularnymi widokami (Dashboard, Firmy, Kontakty, Kanban) oraz natywnym wdrożeniem na globalnej sieci Cloudflare Pages.',
+    keyFeatures: [
+      'Wielokolumnowa tablica Kanban do wizualizacji etapów lejków rekrutacyjnych',
+      'Katalog zweryfikowanych pracodawców i firm oferujących pracę w 100% zdalną',
+      'Moduł zarządzania kontaktami i kandydatami z historią interakcji',
+      'Personalizacja interfejsu (motyw ciemny/jasny) i automatyczna synchronizacja w localStorage',
+      'Wdrożenie na globalnym CDN Cloudflare Pages'
+    ],
+    techStack: ['React', 'TypeScript', 'Lucide Icons', 'Vite', 'Tailwind CSS', 'Cloudflare Pages'],
+    metrics: [
+      { label: 'Czas ładowania', value: '< 100 ms' },
+      { label: 'Architektura', value: 'Edge CDN' },
+      { label: 'Baza danych', value: 'Local Persistence' }
+    ]
+  },
+  {
+    id: 'powrot-do-sily',
+    slug: 'powrot-do-sily',
+    title: 'Powrót do Siły — Odtwarzacz & Karaoke Visualizer',
+    tagline: 'Multimedialny odtwarzacz audio z analizatorem fal dźwiękowych i karaoke w czasie rzeczywistym',
+    category: 'edutech',
+    categoryLabel: 'Audio & Multimedia',
+    date: 'Wrzesień 2026',
+    repoName: 'powrot-do-sily',
+    githubUrl: 'https://github.com/deejaykey32-star',
+    liveUrl: 'https://powrot-do-sily.pages.dev',
+    featured: false,
+    image: guitarImage,
+    badgeHighlight: 'Web Audio API · Dynamic Sound Wave · Karaoke Lyrics Sync',
+    summary: 'Zaawansowana aplikacja audiowizualna łącząca wielościeżkowy odtwarzacz audio z dynamicznym visualizerem fal dźwiękowych (Sound Wave Canvas), synchronizacją tekstu karaoke z podświetlaniem wersów oraz warstwowym tłem ambientowym z dynamicznym rozmyciem.',
+    challenge: 'Precyzyjna synchronizacja wersów lirycznych z czasem odtwarzania audio w przeglądarkach oraz responsywne generowanie animacji fal bez obciążania procesora urządzenia mobilnego.',
+    solution: 'Wykorzystano Web Audio API do przetwarzania częstotliwości w locie oraz lekki silnik zdarzeń timeupdate z CSS Keyframes i gradientami tła dla immersyjnego odbioru.',
+    keyFeatures: [
+      'Precyzyjnie zsynchronizowany tekst pieśni w trybie karaoke z aktywnym wskaźnikiem wersów',
+      'Dynamiczny analizator fal dźwiękowych w nagłówku reagujący na rytm',
+      'Płynny selektor ścieżek muzycznych (Powrót do Siły 1 & 2)',
+      'Warstwowa oprawa graficzna z ambientowym rozmyciem tła (Blur & Overlay Art)',
+      'Globalna dystrybucja na Cloudflare Pages'
+    ],
+    techStack: ['JavaScript', 'Web Audio API', 'HTML5 Audio', 'CSS Keyframes & Variables', 'Cloudflare Pages'],
+    metrics: [
+      { label: 'Latencja audio', value: 'Zero-Lag' },
+      { label: 'Wizualizacja', value: '60 FPS Canvas' },
+      { label: 'Wersje utworów', value: 'Dual-Track' }
+    ]
+  },
+  {
+    id: 'asystent-czytania-biblii',
+    slug: 'asystent-czytania-biblii',
+    title: 'Asystent Chronologicznego Czytania Biblii',
+    tagline: '365-dniowy interaktywny przewodnik przez epoki biblijne z synchronizacją postępów',
+    category: 'ai',
+    categoryLabel: 'AI & Edukacja',
+    date: 'Wrzesień 2026',
+    repoName: 'asystent-czytania-biblii',
+    githubUrl: 'https://github.com/deejaykey32-star',
+    liveUrl: 'https://asystent-czytania-biblii.pages.dev',
+    featured: false,
+    image: wnrAiImage,
+    badgeHighlight: 'Google AI Studio · 365 Dni · Epoki Historyczne · Kopia JSON',
+    summary: 'Aplikacja stworzona w Google AI Studio do systematycznego, chronologicznego studiowania Pisma Świętego. Dzieli historię zbawienia na epoki (od stworzenia, przez patriarchów, niewolę, po czasy Chrystusa i Kościoła), monitorując postępy użytkownika, udostępniając notatnik i umożliwiając eksport kopii zapasowej.',
+    challenge: 'Złożoność ksiąg biblijnych sprawia, że tradycyjne czytanie "od deski do deski" gubi ciągłość historyczną. Potrzebne było narzędzie porządkujące chronologię z mechanizmem motywacji i zapisu refleksji.',
+    solution: 'Zaimplementowano interaktywne drzewo epok z kalkulatorem procentowym dla każdego okresu, notatnik rozważań per dzień oraz bezstratny eksport/import bazy wiedzy w formacie JSON.',
+    keyFeatures: [
+      'Kompletny 365-dniowy plan czytań ułożony w ścisłym porządku chronologicznym',
+      'Podział na epoki historyczne z indywidualnymi paskami postępu ukończenia',
+      'Osobisty notatnik refleksji i modlitw przypisanych do poszczególnych dni',
+      'Eksport i import pełnej kopii zapasowej postępów (JSON)',
+      'Architektura PWA z możliwością instalacji na telefonie'
+    ],
+    techStack: ['Google AI Studio', 'React', 'TypeScript', 'Tailwind CSS', 'PWA Manifest', 'Cloudflare Pages'],
+    metrics: [
+      { label: 'Horyzont czytań', value: '365 Dni' },
+      { label: 'Kategorie epok', value: 'Pełna Chronologia' },
+      { label: 'Kopia bezpieczeństwa', value: 'Eksport JSON' }
+    ]
+  },
+  {
+    id: 'ai-video-generator',
+    slug: 'ai-video-generator',
+    title: 'AI Video Studio & Prompt Generator',
+    tagline: 'Automatyczna produkcja scenariuszy wideo, klatek kluczowych i promptów z modelem Gemini',
+    category: 'ai',
+    categoryLabel: 'AI & Google AI Studio',
+    date: 'Sierpień 2026',
+    repoName: 'ai-video-generator',
+    githubUrl: 'https://github.com/deejaykey32-star',
+    liveUrl: 'https://ai-video-generator-c8q.pages.dev',
+    featured: false,
+    image: embikImage,
+    badgeHighlight: 'Google AI Studio · Gemini API · Storyboard AI · Video Pipeline',
+    summary: 'Zaawansowane studio produkcyjne w Google AI Studio do automatyzacji tworzenia treści wideo. Narzędzie dekomponuje wpisy blogowe i rozważania na sekwencje scen, generuje precyzyjne prompty dla generatorów obrazów i wideo AI oraz przygotowuje parametry montażu pod standard YouTube Studio.',
+    challenge: 'Ręczne przekładanie długich tekstów na scenariusze wideo ze spójnymi promptami stylistycznymi wymaga wielu godzin pracy. Celem była pełna automatyzacja potoku kreatywnego.',
+    solution: 'Zintegrowano model Google Gemini API z modułem prompt chainingu, który automatycznie ekstrahuje kluczowe emocje, dynamikę sceny i generuje techniczne prompty graficzne (HD, FPS, kompozycja kadrów).',
+    keyFeatures: [
+      'Automatyczny podział tekstu na sceny narracyjne z estymacją czasu trwania',
+      'Generator technicznych promptów graficznych i wideo dla każdej klatki kluczowej',
+      'Struktura scenariusza zoptymalizowana pod publikacje wideo (YouTube Studio, Shorts)',
+      'Podgląd storyboardu z podziałem na kanały audio, lektora i wizualia',
+      'Błyskawiczne serwowanie z globalnego CDN Cloudflare Pages'
+    ],
+    techStack: ['@google/genai', 'React', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Express API'],
+    metrics: [
+      { label: 'Silnik LLM', value: 'Google Gemini Pro' },
+      { label: 'Automatyzacja', value: 'Scena → Prompt → Wideo' },
+      { label: 'Formaty wyjściowe', value: 'YouTube HD / 16:9 / 9:16' }
+    ]
+  },
+  {
+    id: 'milosierdzie',
+    slug: 'milosierdzie',
+    title: 'Jezu, ufam Tobie — Sakralna Kontemplacja & Różaniec',
+    tagline: 'Kontemplacyjny asystent modlitewny z lektorem, oprawą muzyczną i typografią sacrum',
+    category: 'maps',
+    categoryLabel: 'Kultura & Sacrum',
+    date: 'Wrzesień 2026',
+    repoName: 'milosierdzie',
+    githubUrl: 'https://github.com/deejaykey32-star',
+    liveUrl: 'https://milosierdzie.pages.dev',
+    featured: false,
+    image: koronkaImage,
+    badgeHighlight: 'Dźwięk Lektora · Typografia Spectral · Tryb Automatyczny · PWA',
+    summary: 'Aplikacja dewocyjno-kontemplacyjna dedykowana modlitwie Koronki do Miłosierdzia Bożego oraz Różańca na tle klasycznego wizerunku Jezusa Miłosiernego. Wyróżnia się podniosłą oprawą audio z lektorem i tłem muzycznym oraz wyszukaną typografią sacrum Spectral i Alegreya.',
+    challenge: 'Zapewnienie seniorom i osobom modlącym się w skupieniu maksymalnie czystego, pozbawionego reklam i rozpraszaczy interfejsu o wysokiej czytelności i płynnym odtwarzaniu głosu lektora.',
+    solution: 'Stworzono minimalistyczny, responsywny silnik z natywnym odtwarzaczem audio, trybem automatycznym przechodzenia przez kolejne dziesiątki oraz instalowalnym manifestem PWA działającym offline.',
+    keyFeatures: [
+      'Wbudowane nagrania dźwiękowe modlitwy lektorskiej z łagodnym podkładem muzycznym',
+      'Dostojna kompozycja typograficzna oparta o kroje Spectral i Alegreya Sans',
+      'Pełnoekranowy tryb kontemplacji zoptymalizowany pod ekrany AMOLED i urządzenia mobilne',
+      'Automatyczny tryb sekwencyjny eliminujący konieczność manualnego klikania',
+      'Wdrożenie jako instalowalna aplikacja Progressive Web App (PWA) na Cloudflare Pages'
+    ],
+    techStack: ['JavaScript', 'HTML5 Audio Engine', 'Spectral Typography', 'PWA Webmanifest', 'Cloudflare Pages'],
+    metrics: [
+      { label: 'Dostępność', value: '100% Bez reklam' },
+      { label: 'Odtwarzanie', value: 'Lektor + Muzyka' },
+      { label: 'Tryb offline', value: 'Zgodny z PWA' }
+    ]
+  },
+  {
+    id: 'wnr365-explorer',
+    slug: 'wnr365-explorer',
+    title: 'WnR365 Explorer — Kalendarium Liturgiczne & PWA',
+    tagline: 'Mobilna aplikacja PWA z bazą rozważań 365 dni, godzinami kanonicznymi i edytorem',
+    category: 'edutech',
+    categoryLabel: 'EdTech & PWA',
+    date: 'Sierpień 2026',
+    repoName: 'wnr365-explorer',
+    githubUrl: 'https://github.com/deejaykey32-star',
+    liveUrl: 'https://wnr365-explorer-e10.pages.dev',
+    featured: false,
+    image: rhzImage,
+    badgeHighlight: 'Godziny Kanoniczne · PWA Explorer · 365 Dni · Edytor Treści',
+    summary: 'Dedykowana aplikacja mobilna PWA do codziennego przeglądania i eksploracji bazy rozważań projektu Widoki na Raj. Oferuje zintegrowany porządek godzin modlitewnych (Tercja 9:00, Seksta 12:00, Nona 15:00), dynamiczną nawigację po 365 dniach oraz moduł edycji wpisów.',
+    challenge: 'Umożliwienie użytkownikom szybkiego dostępu do modlitw o określonych porach dnia z telefonu bez konieczności ładowania całego portalu głównego.',
+    solution: 'Zaimplementowano kompaktowy interfejs PWA z ciemnym motywem OLED, natychmiastowym przełączaniem dni oraz wbudowanym edytorem wariantów alternatywnych.',
+    keyFeatures: [
+      'Intuicyjna nawigacja po pełnym 365-dniowym kalendarium rozważań',
+      'Segmentowane moduły godzin kanonicznych: Tercja (9:00), Seksta (12:00), Nona (15:00)',
+      'Wbudowany edytor wpisów liturgicznych z obsługą formatowania HTML',
+      'Ciemny, energooszczędny interfejs graficzny (#09090b) z ikonami PWA',
+      'Błyskawiczne wdrażanie na Cloudflare Pages'
+    ],
+    techStack: ['React', 'TypeScript', 'PWA Manifest', 'HTML5 Semantic UI', 'Cloudflare Pages'],
+    metrics: [
+      { label: 'Liczba dni', value: '365 wpisów' },
+      { label: 'Godziny modlitw', value: 'Tercja, Seksta, Nona' },
+      { label: 'Wsparcie mobilne', value: 'Pełne PWA' }
+    ]
+  },
+  {
+    id: 'codepen-paleta-barw',
+    slug: 'codepen-paleta-barw',
+    title: 'Paleta Barw i Kolorów — Model RGB & CMYK (CodePen)',
+    tagline: 'Interaktywne studium fizyki światła RGB i syntezy subtraktywnej CMYK w CodePen',
+    category: 'codepen',
+    categoryLabel: 'CodePen & Creative Coding',
+    date: 'Październik 2026',
+    repoName: 'codepen/emZXYjJ',
+    githubUrl: 'https://codepen.io/Aledom/pen/emZXYjJ',
+    liveUrl: 'https://codepen.io/Aledom/full/emZXYjJ',
+    featured: false,
+    image: rgbImage,
+    badgeHighlight: 'CodePen @Aledom · RGB vs CMYK · 4 Poziomy Rzeczywistości · Canvas',
+    summary: 'Autorski eksperyment kreatywny opublikowany na platformie CodePen. Prezentuje interaktywne modelowanie fizyki światła oraz relacji pomiędzy addytywną syntezą barw ekranowych (RGB) a subtraktywną materią poligraficzną (CMYK). Wizualizuje 4 poziomy rzeczywistości: Kontrast, Przezroczystość, Pełnię Barw oraz Biel jako źródło światła.',
+    challenge: 'Zobrazowanie złożonej koncepcji filozoficzno-optycznej w sposób interaktywny i dostępny bezpośrednio w przeglądarce za pomocą czystego, niezależnego kodu na CodePen.',
+    solution: 'Zaprojektowano samowystarczalny moduł HTML/CSS/JS z dynamicznymi suwakami składowych widmowych, przeliczaniem kontrastów barwnych i płynną animacją przejść.',
+    keyFeatures: [
+      'Bezpośrednie uruchamianie w chmurze CodePen bez instalacji i konfiguracji',
+      'Interaktywny symulator mieszania addytywnego RGB (światło) oraz subtraktywnego CMYK (druk)',
+      'Wizualizacja czterech poziomów: Kontrast, Przezroczystość, Pełnia Barw, Biel',
+      'Dynamiczne obliczanie kontrastów luminancji i składowych heksadecymalnych',
+      'Dostęp do pełnego, otwartego kodu źródłowego na profilu CodePen @Aledom'
+    ],
+    techStack: ['CodePen', 'HTML5 Canvas', 'CSS Variables', 'JavaScript ES6', 'Color Theory'],
+    metrics: [
+      { label: 'Platforma', value: 'CodePen @Aledom' },
+      { label: 'Modele barw', value: 'RGB + CMYK' },
+      { label: 'Zależności', value: 'Zero (Pure Web)' }
+    ]
+  },
+  {
+    id: 'codepen-siatka-piramidy',
+    slug: 'codepen-siatka-piramidy',
+    title: 'Geometria Dziejów — Siatka Piramidy i Klepsydry 3D (CodePen)',
+    tagline: 'Trójwymiarowy model transformacji siatki geometrycznej w podwójną piramidę w CodePen',
+    category: 'codepen',
+    categoryLabel: 'CodePen & Creative Coding',
+    date: 'Październik 2026',
+    repoName: 'codepen/xbRXKqX',
+    githubUrl: 'https://codepen.io/Aledom/pen/xbRXKqX',
+    liveUrl: 'https://codepen.io/Aledom/full/xbRXKqX',
+    featured: false,
+    image: histadaImage,
+    badgeHighlight: 'CodePen @Aledom · CSS 3D Transforms · Model Klepsydry · Interaktywne 3D',
+    summary: 'Interaktywny model geometryczny 3D opublikowany na CodePen. Przedstawia matematyczną i symboliczną transformację dwuwymiarowej siatki geometrycznej składającej się w przestrzenną podwójną piramidę i klepsydrę. Projekt bada relacje światła i cienia, dwuwymiarowej płaszczyzny oraz trójwymiarowej osi z białą i czarną perłą w centrum symbolu.',
+    challenge: 'Płynna, trójwymiarowa animacja składania wielościennej siatki geometrycznej w przestrzeni CSS 3D z zachowaniem spójności krawędzi i swobodnej kontroli kamery.',
+    solution: 'Wykorzystano macierze przekształceń CSS 3D (rotateX, rotateY, perspective, transform-style: preserve-3d) sterowane zdarzeniami myszy i dotyku w środowisku CodePen.',
+    keyFeatures: [
+      'Płynna trójwymiarowa animacja składania siatki 2D w podwójną piramidę 3D',
+      'Interaktywny podgląd perspektywiczny z obrotem kamery wokół osi bryły',
+      'Wizualizacja symboliki światła i cienia (biała i czarna perła w centrum klepsydry)',
+      'Lekka, bezramkowa implementacja dostępna na żywo na CodePen',
+      'Kod źródłowy otwarty do eksperymentów i forkowania na profilu @Aledom'
+    ],
+    techStack: ['CodePen', 'CSS 3D Transforms', 'Perspective Projection', 'JavaScript ES6', 'SVG Geometry'],
+    metrics: [
+      { label: 'Platforma', value: 'CodePen @Aledom' },
+      { label: 'Silnik 3D', value: 'CSS 3D Matrix' },
+      { label: 'Wydajność', value: '60 FPS Hardware' }
+    ]
   }
 ];
 
 export const STATS = [
   { label: 'Publiczne Repozytoria GitHub', value: '23+' },
-  { label: 'Aplikacje Google AI Studio', value: 'Aktywne' },
+  { label: 'Wdrożenia Cloudflare Pages', value: '16+' },
+  { label: 'Eksperymenty CodePen', value: 'Aktywne' },
   { label: 'Generowane kombinacje narracji', value: '52M+' },
   { label: 'Architektura i Chmura', value: 'Cloudflare & GCP' }
 ];

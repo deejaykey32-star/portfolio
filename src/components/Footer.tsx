@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Sparkles } from 'lucide-react';
+import { ArrowUp, Github, Sparkles, Code2 } from 'lucide-react';
 
 interface FooterProps {
   onScrollTop: () => void;
@@ -26,6 +26,16 @@ export const Footer: React.FC<FooterProps> = ({ onScrollTop }) => {
           >
             <Github className="w-3.5 h-3.5" />
             <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://codepen.io/Aledom"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
+          >
+            <Code2 className="w-3.5 h-3.5 text-amber-400" />
+            <span>CodePen @Aledom</span>
           </a>
 
           <a

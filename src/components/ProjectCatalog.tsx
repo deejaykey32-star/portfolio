@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ExternalLink, ArrowUpRight, Github, Sparkles, Filter } from 'lucide-react';
+import { Search, ExternalLink, ArrowUpRight, Github, Sparkles, Filter, Code2 } from 'lucide-react';
 import { Project } from '../data/projectsData';
 
 interface ProjectCatalogProps {
@@ -7,7 +7,7 @@ interface ProjectCatalogProps {
   onSelectProject: (project: Project) => void;
 }
 
-type FilterCategory = 'all' | 'ai' | 'edutech' | 'tools' | 'games' | 'maps';
+type FilterCategory = 'all' | 'ai' | 'edutech' | 'tools' | 'games' | 'maps' | 'codepen';
 
 export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSelectProject }) => {
   const [activeCategory, setActiveCategory] = useState<FilterCategory>('all');
@@ -37,6 +37,7 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
     { id: 'tools', label: 'Narzędzia & Poligrafia', count: projects.filter(p => p.category === 'tools').length },
     { id: 'games', label: 'Gry & Symulacje', count: projects.filter(p => p.category === 'games').length },
     { id: 'maps', label: 'GIS & Kultura', count: projects.filter(p => p.category === 'maps').length },
+    { id: 'codepen', label: 'CodePen & Creative Coding', count: projects.filter(p => p.category === 'codepen').length },
   ];
 
   return (
@@ -227,9 +228,13 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
                       target="_blank"
                       rel="noreferrer noopener"
                       className="text-neutral-400 hover:text-white transition-colors"
-                      title="Kod źródłowy w GitHub"
+                      title={project.githubUrl.includes('codepen.io') ? 'Zobacz na CodePen' : 'Kod źródłowy w GitHub'}
                     >
-                      <Github className="w-3.5 h-3.5" />
+                      {project.githubUrl.includes('codepen.io') ? (
+                        <Code2 className="w-3.5 h-3.5 text-amber-400" />
+                      ) : (
+                        <Github className="w-3.5 h-3.5" />
+                      )}
                     </a>
                   </div>
                 </div>

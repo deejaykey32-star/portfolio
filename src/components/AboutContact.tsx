@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Github, Sparkles, Check, Copy, Terminal, Shield, Award, Send } from 'lucide-react';
+import { Mail, Github, Sparkles, Check, Copy, Terminal, Shield, Award, Send, Code2 } from 'lucide-react';
 import { SKILL_DOMAINS, ENGINEER_PROFILE_IMAGE } from '../data/projectsData';
 
 export const AboutContact: React.FC = () => {
@@ -56,6 +56,10 @@ export const AboutContact: React.FC = () => {
               <div className="flex items-center gap-3">
                 <Terminal className="w-4 h-4 text-amber-400" />
                 <span>GitHub ID: <strong className="text-white font-mono">deejaykey32-star</strong></span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Code2 className="w-4 h-4 text-amber-400" />
+                <span>CodePen: <strong className="text-white font-mono">@Aledom</strong></span>
               </div>
               <div className="flex items-center gap-3">
                 <Sparkles className="w-4 h-4 text-amber-400" />
@@ -143,7 +147,7 @@ export const AboutContact: React.FC = () => {
             </button>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-neutral-800/80 flex justify-center items-center gap-6 text-xs text-neutral-400">
+          <div className="mt-8 pt-6 border-t border-neutral-800/80 flex flex-wrap justify-center items-center gap-6 text-xs text-neutral-400">
             <a
               href="https://github.com/deejaykey32-star"
               target="_blank"
@@ -152,6 +156,16 @@ export const AboutContact: React.FC = () => {
             >
               <Github className="w-3.5 h-3.5 text-amber-400" />
               <span>github.com/deejaykey32-star</span>
+            </a>
+            <span aria-hidden="true" className="text-neutral-700">&middot;</span>
+            <a
+              href="https://codepen.io/Aledom"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
+            >
+              <Code2 className="w-3.5 h-3.5 text-amber-400" />
+              <span>codepen.io/Aledom</span>
             </a>
           </div>
         </div>

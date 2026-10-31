@@ -257,16 +257,27 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               </a>
             )}
 
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="px-4 py-2 text-xs font-semibold text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg transition-colors flex items-center gap-2"
-            >
-              <Github className="w-3.5 h-3.5" />
-              <span>Repozytorium GitHub</span>
-              <ExternalLink className="w-3 h-3 text-neutral-400" />
-            </a>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="px-4 py-2 text-xs font-semibold text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg transition-colors flex items-center gap-2"
+              >
+                {project.githubUrl.includes('codepen.io') ? (
+                  <>
+                    <Code2 className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Otwórz w CodePen</span>
+                  </>
+                ) : (
+                  <>
+                    <Github className="w-3.5 h-3.5" />
+                    <span>Repozytorium GitHub</span>
+                  </>
+                )}
+                <ExternalLink className="w-3 h-3 text-neutral-400" />
+              </a>
+            )}
           </div>
 
           <button

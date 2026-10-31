@@ -51,6 +51,17 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
                   <span>Repozytoria GitHub (23+)</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
+                <span className="text-neutral-600">&middot;</span>
+                <a
+                  href="https://codepen.io/Aledom"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  <Code2 className="w-3 h-3 text-amber-400" />
+                  <span>CodePen @Aledom</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
 
