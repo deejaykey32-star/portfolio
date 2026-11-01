@@ -312,7 +312,7 @@ export function speakKurakMessage(text: string, rate = 1.0) {
   {
     id: 'mapa-orlich-gniazd',
     slug: 'mapa-orlich-gniazd',
-    title: 'Wielka Pielgrzymka Gwiaździsta 2026 & Szlak Orlich Gniazd',
+    title: 'Trynitarna Pielgrzymka Gwiaździsta',
     tagline: 'Interaktywna platforma multimedialno-geograficzna z trasami i profilami wysokości',
     category: 'maps',
     categoryLabel: 'GIS & Kartografia',
@@ -323,7 +323,7 @@ export function speakKurakMessage(text: string, rate = 1.0) {
     featured: true,
     image: mapaImage,
     badgeHighlight: 'System GIS · 3 etapy pielgrzymki · Szlak Jury Krakowsko-Częstochowskiej',
-    summary: 'Kartograficzno-multimedialny portal obsługujący 3-etapową Wielką Pielgrzymkę Gwiaździstą 2026: Zbieżność międzynarodowych tras do Częstochowy, wspólny marsz Szlakiem Orlich Gniazd do Krakowa-Łagiewnik oraz Rozesłanie.',
+    summary: 'Kartograficzno-multimedialny portal obsługujący 3-etapową Trynitarną Pielgrzymkę Gwiaździstą: Zbieżność międzynarodowych tras do Częstochowy, wspólny marsz Szlakiem Orlich Gniazd do Krakowa-Łagiewnik oraz Rozesłanie.',
     challenge: 'Wielotysięczne grupy pielgrzymkowe poruszające się zróżnicowanym terenem jurajskim wymagają natychmiastowego dostępu do profilu wzniesień, źródeł wody, punktów medycznych i koordynatów w warunkach słabego zasięgu.',
     solution: 'Zbudowano lekki interfejs mapowy z warstwami wektorowymi GeoJSON, kalkulatorem przewyższeń, indeksacją zabytków i zamków obronnych oraz trybem offline.',
     keyFeatures: [
@@ -852,7 +852,7 @@ export const SKILL_DOMAINS = [
   },
   {
     title: 'GIS, Kartografia & Systemy P2P',
-    desc: 'Interaktywne portale mapowe (Wielka Pielgrzymka Gwiaździsta 2026, Szlak Orlich Gniazd) oraz łączność radiowa Push-to-Talk WebRTC P2P w Capacitor Android.',
+    desc: 'Interaktywne portale mapowe (Trynitarna Pielgrzymka Gwiaździsta, Szlak Orlich Gniazd) oraz łączność radiowa Push-to-Talk WebRTC P2P w Capacitor Android.',
     tools: ['GeoJSON & Leaflet', 'WebRTC P2P', 'PeerJS', 'Capacitor Android', 'WebSocket']
   }
 ];

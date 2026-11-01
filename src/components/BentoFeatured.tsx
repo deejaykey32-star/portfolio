@@ -194,7 +194,7 @@ export const BentoFeatured: React.FC<BentoFeaturedProps> = ({ projects, onSelect
             </div>
           )}
 
-          {/* Card 4: Wielka Pielgrzymka & Szlak Orlich Gniazd - 7 columns */}
+          {/* Card 4: Trynitarna Pielgrzymka Gwiaździsta - 7 columns */}
           {mapa && (
             <div
               onClick={() => onSelectProject(mapa)}
