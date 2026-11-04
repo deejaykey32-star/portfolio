@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Sparkles, ExternalLink, Code2 } from 'lucide-react';
+import { ArrowDown, Sparkles, ExternalLink, Code2, Linkedin } from 'lucide-react';
 import { HERO_IMAGE, STATS } from '../data/projectsData';
 
 interface HeroProps {
@@ -28,12 +28,34 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
 
               {/* Lead Copy */}
               <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl mb-8">
-                Witam, nazywam się <strong className="text-white font-semibold">Dominik Kuta</strong> (twórca projektów pod szyldem <span className="text-amber-300 font-medium">deejaykey32-star</span>). Projektuję i wdrażam zaawansowane aplikacje multimodalne w <strong className="text-white font-semibold">Google AI Studio</strong>, naukowe symulacje bioinformatyczne, ekosystem edukacyjny <strong className="text-white font-semibold">EduDei</strong> oraz bezkompromisowe narzędzia poligraficzne w architekturze client-side.
+                Witam, nazywam się <strong className="text-white font-semibold">Dominik Kuta</strong> (twórca projektów pod szyldem <span className="text-amber-300 font-medium">deejaykey32-star</span> &middot;{' '}
+                <a
+                  href="https://www.linkedin.com/in/dominik-jan-kuta-07079843/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-amber-300 hover:text-amber-200 underline decoration-amber-400/50 underline-offset-2 transition-colors font-medium inline-flex items-center gap-1"
+                >
+                  <Linkedin className="w-3.5 h-3.5 text-[#0a66c2]" />
+                  <span>Profil LinkedIn</span>
+                  <ExternalLink className="w-3 h-3 text-amber-400/80" />
+                </a>
+                ). Projektuję i wdrażam zaawansowane aplikacje multimodalne w <strong className="text-white font-semibold">Google AI Studio</strong>, naukowe symulacje bioinformatyczne, ekosystem edukacyjny <strong className="text-white font-semibold">EduDei</strong> oraz bezkompromisowe narzędzia poligraficzne w architekturze client-side.
               </p>
 
               {/* Direct reference links bar */}
               <div className="text-xs text-neutral-400 mb-8 flex flex-wrap items-center gap-y-2 gap-x-4">
-                <span>Źródła projektów:</span>
+                <span>Źródła i profile:</span>
+                <a
+                  href="https://www.linkedin.com/in/dominik-jan-kuta-07079843/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  <Linkedin className="w-3 h-3 text-amber-400" />
+                  <span>LinkedIn</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <span className="text-neutral-600">&middot;</span>
                 <button
                   onClick={onOpenAiStudio}
                   className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 font-medium cursor-pointer"

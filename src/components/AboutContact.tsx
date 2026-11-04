@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Github, Sparkles, Check, Copy, Terminal, Shield, Award, Send, Code2 } from 'lucide-react';
+import { Mail, Github, Sparkles, Check, Copy, Terminal, Shield, Award, Send, Code2, Linkedin } from 'lucide-react';
 import { SKILL_DOMAINS, ENGINEER_PROFILE_IMAGE } from '../data/projectsData';
 
 export const AboutContact: React.FC = () => {
@@ -156,6 +156,16 @@ export const AboutContact: React.FC = () => {
             >
               <Github className="w-3.5 h-3.5 text-amber-400" />
               <span>github.com/deejaykey32-star</span>
+            </a>
+            <span aria-hidden="true" className="text-neutral-700">&middot;</span>
+            <a
+              href="https://www.linkedin.com/in/dominik-jan-kuta-07079843/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
+            >
+              <Linkedin className="w-3.5 h-3.5 text-amber-400" />
+              <span>linkedin.com/in/dominik-jan-kuta</span>
             </a>
             <span aria-hidden="true" className="text-neutral-700">&middot;</span>
             <a
