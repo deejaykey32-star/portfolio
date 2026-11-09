@@ -266,3 +266,4 @@ export const VibedudeiSection: React.FC<VibedudeiSectionProps> = ({ onSelectProj
     </section>
   );
 };
+
