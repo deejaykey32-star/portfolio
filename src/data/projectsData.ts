@@ -17,6 +17,7 @@ import koronkaImage from '../assets/images/koronka_rosary_1793198985746.jpg';
 import cvImage from '../assets/images/cv_portfolio_dev_1793199012150.jpg';
 import embikImage from '../assets/images/embik_media_ai_1793198914853.jpg';
 import projedudeiImage from '../assets/images/projedudei_kurak_icon.png';
+import vibedudeiImage from '../assets/images/vibedudei_showcase.jpg';
 
 export interface Project {
   id: string;
@@ -275,6 +276,59 @@ export function speakKurakMessage(text: string, rate = 1.0) {
   
   utterance.onstart = () => setKurakSpeaking(true);
   utterance.onend = () => setKurakSpeaking(false);
+  window.speechSynthesis.speak(utterance);
+}`
+    }
+  },
+  {
+    id: 'vibedudei',
+    slug: 'vibedudei',
+    title: 'VibeEduDei — Nauka Vibe Codingu z AI & Tarcza 48 Tematów',
+    tagline: 'Interaktywna platforma edukacji Vibe Codingu, multimediów i zarządzania produktem po angielsku',
+    category: 'edutech',
+    categoryLabel: 'Edukacja & EdTech',
+    date: 'Listopad 2026',
+    repoName: 'vibedudei',
+    githubUrl: 'https://github.com/deejaykey32-star/vibedudei',
+    liveUrl: 'https://vibedudei.pages.dev',
+    featured: true,
+    image: vibedudeiImage,
+    badgeHighlight: 'Tarcza 48 Tematów · Vibe Coding · Web Speech TTS · YouTube Labs · SRS',
+    summary: 'Kompleksowa platforma do nauki nowoczesnego vibe codingu, prompt engineeringu, grafiki AI, multimediów, e-marketingu oraz zarządzania produktami technologicznymi (PSM, PSPO, PMP) z całościowym zanurzeniem w języku angielskim. Zawiera interaktywną Tarczę 48 Tematów, zintegrowane odtwarzacze wideo z YouTube, moduł wymowy Web Speech API oraz codzienny system powtórek SRS z maskotką Vibe-Kuraka.',
+    challenge: 'Tradycyjna nauka programowania i języka angielskiego odbywa się oddzielnie, a większość kursów nie uczy nowoczesnego paradygmatu Vibe Codingu — czyli błyskawicznego tworzenia gotowych systemów w oparciu o modele językowe, prompt chaining i natychmiastowe prototypowanie.',
+    solution: 'Stworzono modularny ekosystem edukacyjny oparty na 48 tematach w 4 domenach (Programowanie, Grafika AI, E-Marketing, Management). Uczeń trenuje wymowę ze słuchu (shadowing), wykonuje ćwiczenia interaktywne z filmami z YouTube i prowadzi dialog z mentorem AI.',
+    keyFeatures: [
+      'Koło 48 Tematów (Wheel of Topics) podzielone na 4 strategiczne domeny wiedzy technologicznej',
+      'Interaktywny odtwarzacz ćwiczeń powiązany z materiałami wideo z YouTube (listening, shadowing, quizy)',
+      'Silnik wymowy Web Speech API (EN / PL) z regulacją tempa odsłuchu (0.75x i 1.0x) i testem dykcji',
+      'System powtórek interwałowych SRS (Leitner Box) oraz codzienna praktyka 5 promptów z analizą refleksji',
+      '6 poziomów biegłości (V1 → V6) rozłożonych na 104 tygodnie nauki w formacie 30 minut dziennie',
+      'Błyskawiczne wdrożenie brzegowe na platformie Cloudflare Pages w architekturze React 19 i Vite'
+    ],
+    techStack: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'Vite', 'Web Speech API', 'Cloudflare Pages', 'LocalStorage SRS'],
+    metrics: [
+      { label: 'Baza wiedzy', value: '48 tematów tarczy' },
+      { label: 'Ścieżka biegłości', value: '6 poziomów (V1→V6)' },
+      { label: 'Moduł audio', value: 'Web Speech TTS/STT' },
+      { label: 'Dystrybucja', value: 'Cloudflare Pages' }
+    ],
+    codeSnippet: {
+      filename: 'vibe-kurak-tts.ts',
+      language: 'typescript',
+      code: `// Silnik syntezy mowy Vibe-Kuraka ze wsparciem dla akcentów EN i PL
+export function speakPromptEn(text: string, rate = 1.0) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = rate;
+  
+  const voices = window.speechSynthesis.getVoices();
+  const enVoice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Natural')) 
+    || voices.find(v => v.lang.startsWith('en'));
+  if (enVoice) utterance.voice = enVoice;
+  
   window.speechSynthesis.speak(utterance);
 }`
     }
@@ -822,8 +876,8 @@ export function speakKurakMessage(text: string, rate = 1.0) {
 ];
 
 export const STATS = [
-  { label: 'Publiczne Repozytoria GitHub', value: '24+' },
-  { label: 'Wdrożenia Cloudflare Pages', value: '17+' },
+  { label: 'Publiczne Repozytoria GitHub', value: '25+' },
+  { label: 'Wdrożenia Cloudflare Pages', value: '18+' },
   { label: 'Eksperymenty CodePen', value: 'Aktywne' },
   { label: 'Generowane kombinacje narracji', value: '52M+' },
   { label: 'Architektura i Chmura', value: 'Cloudflare & GCP' }
@@ -837,8 +891,8 @@ export const SKILL_DOMAINS = [
   },
   {
     title: 'EdTech & Interaktywne Systemy Dydaktyczne',
-    desc: 'Nowatorskie platformy nauki: ProjEduDei (certyfikacje PM/Scrum/PO, Vibe Coding z AI), LangEduDei (język angielski A1–C2, 104 tygodnie), DrogEduDei (kodeks drogowy, psychotesty), GuitarEduDei (stroik Web Audio, gitara).',
-    tools: ['Web Speech API', 'Web Audio API', 'Gamifikacja XP', 'Metody Doma', 'Spaced Repetition', 'AI Vibe Coding']
+    desc: 'Nowatorskie platformy nauki: VibeEduDei (nauka vibe codingu po angielsku, tarcza 48 tematów, filmy YouTube, SRS), ProjEduDei (certyfikacje PM/Scrum/PO, Vibe Coding z AI), LangEduDei (język angielski A1–C2, 104 tygodnie), DrogEduDei (kodeks drogowy, psychotesty), GuitarEduDei (stroik Web Audio, gitara).',
+    tools: ['Web Speech API', 'Web Audio API', 'Gamifikacja XP', 'Metody Doma', 'Spaced Repetition', 'AI Vibe Coding', 'YouTube Labs']
   },
   {
     title: 'Bioinformatyka & Gry Naukowe',

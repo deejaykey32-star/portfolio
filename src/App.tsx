@@ -8,6 +8,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { BentoFeatured } from './components/BentoFeatured';
 import { ProjedudeiSection } from './components/ProjedudeiSection';
+import { VibedudeiSection } from './components/VibedudeiSection';
 import { AiStudioSection } from './components/AiStudioSection';
 import { ProjectCatalog } from './components/ProjectCatalog';
 import { InteractiveDemos } from './components/InteractiveDemos';
@@ -50,6 +51,12 @@ export default function App() {
 
         {/* ProjEduDei Dedicated Section */}
         <ProjedudeiSection
+          projects={PROJECTS}
+          onSelectProject={(project) => setSelectedProject(project)}
+        />
+
+        {/* VibeEduDei Dedicated Section */}
+        <VibedudeiSection
           projects={PROJECTS}
           onSelectProject={(project) => setSelectedProject(project)}
         />
