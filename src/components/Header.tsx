@@ -55,6 +55,16 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             VibeEduDei
           </a>
           <a
+            href="#mentor360"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate('mentor360');
+            }}
+            className="hover:text-white transition-colors whitespace-nowrap shrink-0"
+          >
+            Mentor 360°
+          </a>
+          <a
             href="#catalog"
             onClick={(e) => {
               e.preventDefault();

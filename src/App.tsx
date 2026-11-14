@@ -9,6 +9,7 @@ import { Hero } from './components/Hero';
 import { BentoFeatured } from './components/BentoFeatured';
 import { ProjedudeiSection } from './components/ProjedudeiSection';
 import { VibedudeiSection } from './components/VibedudeiSection';
+import { Mentor360Section } from './components/Mentor360Section';
 import { AiStudioSection } from './components/AiStudioSection';
 import { ProjectCatalog } from './components/ProjectCatalog';
 import { InteractiveDemos } from './components/InteractiveDemos';
@@ -57,6 +58,12 @@ export default function App() {
 
         {/* VibeEduDei Dedicated Section */}
         <VibedudeiSection
+          projects={PROJECTS}
+          onSelectProject={(project) => setSelectedProject(project)}
+        />
+
+        {/* Mentor 360° Dedicated Section */}
+        <Mentor360Section
           projects={PROJECTS}
           onSelectProject={(project) => setSelectedProject(project)}
         />

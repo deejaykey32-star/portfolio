@@ -18,6 +18,7 @@ import cvImage from '../assets/images/cv_portfolio_dev_1793199012150.jpg';
 import embikImage from '../assets/images/embik_media_ai_1793198914853.jpg';
 import projedudeiImage from '../assets/images/projedudei_kurak_icon.png';
 import vibedudeiImage from '../assets/images/vibedudei_showcase.jpg';
+import mentor360Image from '../assets/images/mentor360_hero.jpg';
 
 export interface Project {
   id: string;
@@ -330,6 +331,62 @@ export function speakPromptEn(text: string, rate = 1.0) {
   if (enVoice) utterance.voice = enVoice;
   
   window.speechSynthesis.speak(utterance);
+}`
+    }
+  },
+  {
+    id: 'mentor360',
+    slug: 'mentor360',
+    title: 'Mentor 360° — AI Product & Game Creator & Tech English',
+    tagline: 'Holistyczna akademia tworzenia produktów cyfrowych, gamedevu i Tech English B1–B2',
+    category: 'ai',
+    categoryLabel: 'AI & Google AI Studio',
+    date: 'Listopad 2026',
+    repoName: 'mentor360',
+    githubUrl: 'https://github.com/deejaykey32-star/mentor360',
+    liveUrl: 'https://mentor360-89v.pages.dev',
+    featured: true,
+    image: mentor360Image,
+    badgeHighlight: 'Google AI Studio · 7 Etapów Cyklu · 4 Perspektywy · Tech English B1–B2 · Gemini API',
+    summary: 'Holistyczna platforma mentorska i akademia tworzenia pełnowymiarowych produktów cyfrowych (gier, aplikacji multi-platform i serwisów WWW) z asystą modeli AI oraz intensywną nauką branżowego języka angielskiego (Tech & Business English B1–B2). Przeprowadza twórcę przez 7 strategicznych etapów: od pierwszej rozmowy z klientem i briefu, przez architekturę UI/UX, generowanie multimediów AI, pisanie kodu multi-platform, bezpieczeństwo i Git, po skalowanie, utrzymanie oraz rekrutację i budowę portfolio.',
+    challenge: 'Większość kursów uczy programowania w oderwaniu od realiów biznesowych: bez bezpośredniego kontaktu z klientem, bez znajomości branżowego słownictwa angielskiego na rozmowach technicznych i bez holistycznego spojrzenia na produkt z perspektywy programisty, projektanta, biznesu oraz rekrutera.',
+    solution: 'Stworzono kompleksowy warsztat 360° oparty na 7 etapach cyklu życia produktu, 4 perspektywach roli (Developer, Artist, Business, Recruiter), symulatorze rozmów z klientem, transkryptach wideo z timecode, ćwiczeniach cloze/quizach oraz lektorze Web Speech API i modelach Gemini.',
+    keyFeatures: [
+      '7 strategicznych etapów cyklu produktu: od rozmowy z klientem i briefu, przez UI/UX, multimedia AI, kod multi-platform, po bezpieczeństwo Git, skalowanie i rekrutację',
+      '4 perspektywy roli (Widok 360°): Developer, Artist/Designer, Business/PM oraz Recruiter/HR dla każdego zagadnienia',
+      'Moduł Tech & Business English B1–B2: słownictwo branżowe z wymową, ćwiczenia z lukami (cloze), quizy sprawdzające i aktywne scenariusze dialogowe',
+      'Baza promptów inżynieryjnych i narzędzi AI: szablony promptów dla UI, kodowania, architektury oraz generowania assetów graficznych i audio',
+      'Bezpośrednia integracja z Google Gemini API (@google/genai) jako inteligentny mentor asystujący w symulacjach projektowych',
+      'Wdrożenie produkcyjne na globalnej sieci brzegowej Cloudflare Pages w architekturze React 19, TypeScript i Vite'
+    ],
+    techStack: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'Motion', 'Vite', 'Google Gemini API (@google/genai)', 'Cloudflare Pages', 'Web Speech API', 'Express'],
+    metrics: [
+      { label: 'Etapy cyklu produktu', value: '7 strategicznych faz' },
+      { label: 'Perspektywy roli', value: '4 kąty widzenia (360°)' },
+      { label: 'Moduł językowy', value: 'Tech English B1→B2' },
+      { label: 'Dystrybucja', value: 'Cloudflare Pages' }
+    ],
+    codeSnippet: {
+      filename: 'mentor-gemini-stream.ts',
+      language: 'typescript',
+      code: `// Integracja z Google Gemini API do symulacji rozmowy z klientem i analizy wymagań
+import { GoogleGenAI } from '@google/genai';
+
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+
+export async function simulateClientFeedback(scopeBriefEn: string, perspective: string) {
+  const response = await ai.models.generateContent({
+    model: 'gemini-2.5-flash',
+    contents: [{
+      role: 'user',
+      parts: [{
+        text: \`Act as a client reviewing the following project brief from the \${perspective} perspective.
+Highlight scope creep risks and suggest clear MVP acceptance criteria in Tech English B1-B2:
+\${scopeBriefEn}\`
+      }]
+    }]
+  });
+  return response.text;
 }`
     }
   },
@@ -876,8 +933,8 @@ export function speakPromptEn(text: string, rate = 1.0) {
 ];
 
 export const STATS = [
-  { label: 'Publiczne Repozytoria GitHub', value: '25+' },
-  { label: 'Wdrożenia Cloudflare Pages', value: '18+' },
+  { label: 'Publiczne Repozytoria GitHub', value: '26+' },
+  { label: 'Wdrożenia Cloudflare Pages', value: '19+' },
   { label: 'Eksperymenty CodePen', value: 'Aktywne' },
   { label: 'Generowane kombinacje narracji', value: '52M+' },
   { label: 'Architektura i Chmura', value: 'Cloudflare & GCP' }
@@ -886,8 +943,8 @@ export const STATS = [
 export const SKILL_DOMAINS = [
   {
     title: 'Sztuczna Inteligencja & AI Studio',
-    desc: 'Projektowanie i wdrażanie aplikacji z modelem Google Gemini API, synteza głosu, prompt engineering, multimodalna analiza dokumentów oraz generowanie paczek produkcyjnych.',
-    tools: ['Google AI Studio', 'Gemini API (@google/genai)', 'Multimodal AI', 'Speech-to-Text', 'Prompt Chaining']
+    desc: 'Projektowanie i wdrażanie aplikacji z modelem Google Gemini API: Mentor 360° (cykl produktu, Tech English B1–B2), synteza głosu, prompt engineering, multimodalna analiza dokumentów oraz generowanie paczek produkcyjnych.',
+    tools: ['Google AI Studio', 'Gemini API (@google/genai)', 'Multimodal AI', 'Speech-to-Text', 'Prompt Chaining', '360° Product Cycle']
   },
   {
     title: 'EdTech & Interaktywne Systemy Dydaktyczne',
