@@ -15,8 +15,8 @@ export const BentoFeatured: React.FC<BentoFeaturedProps> = ({ projects, onSelect
   const mapa = projects.find(p => p.id === 'mapa-orlich-gniazd');
 
   return (
-    <section id="featured" className="py-20 border-b border-neutral-800">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="featured" className="py-16 sm:py-20 border-b border-neutral-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>

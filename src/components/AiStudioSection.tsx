@@ -11,8 +11,8 @@ export const AiStudioSection: React.FC<AiStudioSectionProps> = ({ onSelectProjec
   const aiStudioApps = projects.filter(p => p.category === 'ai' || p.repoName === 'walkie');
 
   return (
-    <section id="ai-studio" className="py-20 border-b border-neutral-800 bg-neutral-900/40">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="ai-studio" className="py-16 sm:py-20 border-b border-neutral-800 bg-neutral-900/40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header Block */}
         <div className="max-w-3xl mb-14">
           <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-3 flex items-center gap-2">

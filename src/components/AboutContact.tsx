@@ -13,8 +13,8 @@ export const AboutContact: React.FC = () => {
   };
 
   return (
-    <section id="about" className="py-20 border-b border-neutral-800">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="about" className="py-16 sm:py-20 border-b border-neutral-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* About Dominik Kuta */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
           <div className="lg:col-span-5">

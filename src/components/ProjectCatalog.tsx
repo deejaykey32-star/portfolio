@@ -41,8 +41,8 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
   ];
 
   return (
-    <section id="catalog" className="py-20 border-b border-neutral-800">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="catalog" className="py-16 sm:py-20 border-b border-neutral-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-10">
           <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">
@@ -81,7 +81,7 @@ export const ProjectCatalog: React.FC<ProjectCatalogProps> = ({ projects, onSele
           </div>
 
           {/* Search Input */}
-          <div className="relative min-w-[280px] sm:w-80">
+          <div className="relative w-full sm:w-80 min-w-0">
             <Search className="w-4 h-4 text-neutral-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"

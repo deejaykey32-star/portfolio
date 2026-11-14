@@ -9,20 +9,20 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenAiStudio }) => {
   return (
-    <section id="home" className="pt-12 pb-16 border-b border-neutral-800">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="home" className="pt-8 sm:pt-12 pb-12 sm:pb-16 border-b border-neutral-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Split Screen 2-Column Hero */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           {/* Left Column: Typographic Hierarchy */}
           <div className="lg:col-span-7 flex flex-col justify-between py-2">
             <div>
               {/* Quiet, unboxed text kicker */}
-              <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-4">
+              <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-3 sm:mb-4">
                 Full-Stack &middot; Google AI Studio &middot; EduTech &middot; Bioinformatyka
               </div>
 
               {/* Display Headline with balanced wrapping */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08] text-balance mb-6">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.08] text-balance mb-6 break-words">
                 Inżynieria oprogramowania, interaktywna edukacja i aplikacje AI nowej generacji.
               </h1>
 

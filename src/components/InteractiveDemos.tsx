@@ -51,8 +51,8 @@ export const InteractiveDemos: React.FC = () => {
   const [eccLevel, setEccLevel] = useState<'L' | 'M' | 'Q' | 'H'>('H');
 
   return (
-    <section id="lab" className="py-20 border-b border-neutral-800 bg-neutral-950">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="lab" className="py-16 sm:py-20 border-b border-neutral-800 bg-neutral-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-3xl mb-12">
           <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2 flex items-center gap-1.5">

@@ -12,12 +12,12 @@ export const ProjedudeiSection: React.FC<ProjedudeiSectionProps> = ({ onSelectPr
   const projedudeiProject = projects.find(p => p.id === 'projedudei');
 
   return (
-    <section id="projedudei" className="py-20 border-b border-neutral-800 bg-gradient-to-b from-neutral-900/50 via-neutral-950 to-neutral-900/40 relative overflow-hidden">
+    <section id="projedudei" className="py-16 sm:py-20 border-b border-neutral-800 bg-gradient-to-b from-neutral-900/50 via-neutral-950 to-neutral-900/40 relative overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Top Header Block */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
           <div className="lg:col-span-8">
@@ -40,21 +40,21 @@ export const ProjedudeiSection: React.FC<ProjedudeiSectionProps> = ({ onSelectPr
                 href="https://projedudei.pages.dev"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="px-5 py-2.5 text-xs font-bold text-neutral-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors inline-flex items-center gap-2 shadow-sm"
+                className="px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-bold text-neutral-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors inline-flex items-center gap-2 shadow-sm"
               >
-                <span>Uruchom aplikację na żywo (projedudei.pages.dev)</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <span>Uruchom aplikację na żywo <span className="hidden sm:inline">(projedudei.pages.dev)</span></span>
+                <ExternalLink className="w-3.5 h-3.5 shrink-0" />
               </a>
 
               <a
                 href="https://github.com/deejaykey32-star/projedudei"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="px-5 py-2.5 text-xs font-semibold text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg transition-colors inline-flex items-center gap-2 shadow-sm"
+                className="px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-semibold text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg transition-colors inline-flex items-center gap-2 shadow-sm"
               >
-                <Github className="w-3.5 h-3.5" />
-                <span>Repozytorium GitHub (@deejaykey32-star/projedudei)</span>
-                <ExternalLink className="w-3 h-3 text-neutral-400" />
+                <Github className="w-3.5 h-3.5 shrink-0" />
+                <span>Repozytorium GitHub <span className="hidden sm:inline">(@deejaykey32-star/projedudei)</span></span>
+                <ExternalLink className="w-3 h-3 text-neutral-400 shrink-0" />
               </a>
 
               {projedudeiProject && (

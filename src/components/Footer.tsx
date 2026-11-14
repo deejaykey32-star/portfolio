@@ -8,7 +8,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onScrollTop }) => {
   return (
     <footer className="py-12 bg-neutral-950 text-neutral-400 text-xs border-t border-neutral-800">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
           <span className="font-bold text-white tracking-tight">Dominik Kuta</span>
           <span className="hidden sm:inline" aria-hidden="true">&middot;</span>
